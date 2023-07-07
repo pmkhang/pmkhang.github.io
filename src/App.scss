@@ -1,0 +1,14 @@
+.header {
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   box-shadow: 1px 1px 10px 5px rgba(0, 0, 0, 0.2);
+}
+
+.content {
+   margin-top: calc(var(--default-layout-header-height) + 20px);
+   min-height: 2000px;
+}
+.footer {
+}

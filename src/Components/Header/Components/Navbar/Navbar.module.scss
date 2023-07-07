@@ -1,0 +1,30 @@
+.navbar-list {
+   display: flex;
+}
+.navbar-item {
+   margin: 0 12px;
+}
+.navbar-link {
+   position: relative;
+   padding: 8px;
+   font-size: 2rem;
+   font-weight: 600;
+   &::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      width: 0;
+      height: 2px;
+      background-color: var(--black);
+      transition: width 0.3s;
+      transform: translateX(-50%);
+      border-radius: 30px;
+   }
+   &:hover::after {
+      width: calc(100% + 10px);
+   }
+   &:focus::after {
+      width: calc(100% + 10px);
+   }
+}
