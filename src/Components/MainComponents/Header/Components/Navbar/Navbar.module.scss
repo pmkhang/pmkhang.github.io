@@ -15,16 +15,16 @@
       left: 50%;
       bottom: 0;
       width: 0;
-      height: 2px;
-      background-color: var(--black);
+      height: 3px;
+      background-color: var(--primary);
       transition: width 0.3s;
       transform: translateX(-50%);
       border-radius: 30px;
    }
    &:hover::after {
-      width: calc(100% + 10px);
+      width: calc(100% - 15px);
    }
    &:focus::after {
-      width: calc(100% + 10px);
+      width: calc(100% - 15px);
    }
 }
