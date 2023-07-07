@@ -10,19 +10,23 @@ function App(): JSX.Element {
          <Grid>
             <Row>
                <Col size={['l-12']}>
-                  <div className='header'>
+                  <div className="header">
                      <Header />
                   </div>
                </Col>
             </Row>
             <Row>
                <Col size={['l-12']}>
-                  <div className='content'><Content /></div>
+                  <div className="content">
+                     <Content />
+                  </div>
                </Col>
             </Row>
             <Row>
                <Col size={['l-12']}>
-                  <div className='footer'><Footer /></div>
+                  <div className="footer">
+                     <Footer />
+                  </div>
                </Col>
             </Row>
          </Grid>
