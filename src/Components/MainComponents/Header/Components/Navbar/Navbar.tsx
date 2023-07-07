@@ -9,7 +9,7 @@ const Navbar: React.FC = () => {
       <nav className={cx('navbar')}>
          <ul className={cx('navbar-list')}>
             <li className={cx('navbar-item')}>
-               <a className={cx('navbar-link')} href="#">
+               <a className={cx('navbar-link')} href="#footer">
                   About Me
                </a>
             </li>

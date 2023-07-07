@@ -24,7 +24,7 @@ function App(): JSX.Element {
             </Row>
             <Row>
                <Col size={['l-12']}>
-                  <div className="footer">
+                  <div className="footer" id='footer'>
                      <Footer />
                   </div>
                </Col>

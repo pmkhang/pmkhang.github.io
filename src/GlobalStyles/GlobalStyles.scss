@@ -10,7 +10,7 @@
 }
 
 :root {
-   --primary: #b04057;
+   --primary: #a32765;
    --black: #000;
    --white: #fff;
    --text-color: #161823;
@@ -22,6 +22,7 @@
 }
 html {
    font-size: 62.5%;
+   scroll-behavior: smooth;
 }
 
 html body {
