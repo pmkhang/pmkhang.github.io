@@ -8,5 +8,23 @@
 }
 .logo-img {
    width: 90px;
-   margin-top: 8px;
+   margin: 8px 0 0 20px;
+}
+
+@media (min-width: 740px) and (max-width: 1023px) {
+   .header {
+      height: calc(var(--default-layout-header-height) - 10px);
+   }
+   .logo-img {
+      width: 80px;
+   }
+}
+
+@media (max-width: 739px) {
+   .header {
+      height: calc(var(--default-layout-header-height) - 30px);
+   }
+   .logo-img {
+      width: 60px;
+   }
 }
