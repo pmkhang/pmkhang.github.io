@@ -8,7 +8,7 @@
    top: 0;
    left: 0;
    right: 0;
-   box-shadow: 1px 1px 10px 5px rgba(0, 0, 0, 0.2);
+   box-shadow: var(--box-shadow);
    background-color: var(--white);
 }
 
@@ -17,13 +17,11 @@
    margin: calc(var(--default-layout-header-height)) auto;
    min-height: 2000px;
    padding: 0 10px;
-
 }
 .footer {
    max-width: 1200px;
    margin: 0 auto;
    padding: 0 10px;
-
 }
 
 @media (min-width: 740px) and (max-width: 1023px) {

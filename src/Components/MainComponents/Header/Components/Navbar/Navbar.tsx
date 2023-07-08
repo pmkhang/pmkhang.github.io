@@ -20,27 +20,27 @@ const Navbar: React.FC = () => {
          <nav className={cx('navbar')}>
             <ul className={cx('navbar-list')}>
                <li className={cx('navbar-item')}>
-                  <Link className={cx('navbar-link')} to="footer" smooth={true} duration={50}>
+                  <Link className={cx('navbar-link')} to="aboutme" offset={-80} smooth={true} duration={50}>
                      About Me
                   </Link>
                </li>
                <li className={cx('navbar-item')}>
-                  <Link className={cx('navbar-link')} to="education" smooth={true} duration={50}>
+                  <Link className={cx('navbar-link')} to="education" offset={-80} smooth={true} duration={50}>
                      Education
                   </Link>
                </li>
                <li className={cx('navbar-item')}>
-                  <Link className={cx('navbar-link')} to="experience" smooth={true} duration={50}>
+                  <Link className={cx('navbar-link')} to="experience" offset={-80} smooth={true} duration={50}>
                      Experience
                   </Link>
                </li>
                <li className={cx('navbar-item')}>
-                  <Link className={cx('navbar-link')} to="portfolio" smooth={true} duration={50}>
+                  <Link className={cx('navbar-link')} to="portfolio" offset={-80} smooth={true} duration={50}>
                      Portfolio
                   </Link>
                </li>
                <li className={cx('navbar-item')}>
-                  <Link className={cx('navbar-link')} to="contact" smooth={true} duration={50}>
+                  <Link className={cx('navbar-link')} to="contact" offset={-80} smooth={true} duration={50}>
                      Contact
                   </Link>
                </li>

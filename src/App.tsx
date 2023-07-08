@@ -10,6 +10,9 @@ const App: React.FC = () => {
          <div className="header">
             <Header />
          </div>
+         <div className="banner">
+            
+         </div>
          <div className="content">
             <Content />
          </div>
