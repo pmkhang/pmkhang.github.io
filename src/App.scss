@@ -17,11 +17,13 @@
    margin: calc(var(--default-layout-header-height)) auto;
    min-height: 2000px;
    padding: 0 10px;
+
 }
 .footer {
    max-width: 1200px;
    margin: 0 auto;
    padding: 0 10px;
+
 }
 
 @media (min-width: 740px) and (max-width: 1023px) {

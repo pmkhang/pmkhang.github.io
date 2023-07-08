@@ -1,5 +1,7 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import classNames from 'classnames/bind';
 import React, { useState } from 'react';
+
 
 import styles from './Navbar.module.scss';
 
@@ -11,6 +13,7 @@ const Navbar: React.FC = () => {
    const handleMenuToggle = () => {
       setIsActive(!isActive);
    };
+   
    return (
       <>
          <nav className={cx('navbar')}>

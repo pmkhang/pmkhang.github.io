@@ -1,9 +1,10 @@
+import React from 'react';
 import Content from './Components/MainComponents/Content';
 import Footer from './Components/MainComponents/Footer';
 import Header from './Components/MainComponents/Header';
 import './App.scss';
 
-function App(): JSX.Element {
+const App: React.FC = () => {
    return (
       <div className="wrapper">
          <div className="header">
@@ -17,6 +18,6 @@ function App(): JSX.Element {
          </div>
       </div>
    );
-}
+};
 
 export default App;
