@@ -1,7 +1,7 @@
 import classNames from 'classnames/bind';
 
 import styles from './Content.module.scss';
-import AboutMe from './Components/AboutMe';
+import AboutMe from './Components/AboutMe/AboutMe';
 import Education from './Components/Education';
 import Experience from './Components/Experience';
 import Portfolio from './Components/Portfolio';
@@ -11,11 +11,24 @@ const cx = classNames.bind(styles);
 const Content = () => {
    return (
       <div className={cx('wrapper')}>
-         <AboutMe />
-         <Education />
-         <Experience />
-         <Portfolio />
-         <Contact />
+         <div className={cx('container')}>
+            <AboutMe />
+         </div>
+         <div className={cx('container')}>
+            <Education />
+         </div>
+
+         <div className={cx('container')}>
+            <Experience />
+         </div>
+
+         <div className={cx('container')}>
+            <Portfolio />
+         </div>
+
+         <div className={cx('container')}>
+            <Contact />
+         </div>
       </div>
    );
 };
