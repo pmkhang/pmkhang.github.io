@@ -73,3 +73,8 @@ a,
 input[type='submit'] {
    -webkit-tap-highlight-color: transparent;
 }
+
+::selection {
+   background-color: var(--primary);
+   color: var(--white);
+}
