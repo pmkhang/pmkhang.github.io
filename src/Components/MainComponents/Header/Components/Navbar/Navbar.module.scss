@@ -4,6 +4,7 @@
 
 .navbar-item {
    margin: 0 12px;
+   
    // display: none;
 }
 
@@ -12,8 +13,7 @@
    padding: 12px;
    font-size: 2rem;
    font-weight: 600;
-   color: var(--text-color);
-
+   cursor: pointer;
    &::after {
       content: '';
       position: absolute;
