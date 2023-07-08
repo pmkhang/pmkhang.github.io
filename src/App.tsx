@@ -1,22 +1,24 @@
 import React from 'react';
+import classNames from 'classnames/bind';
+
 import Content from './Components/MainComponents/Content';
 import Footer from './Components/MainComponents/Footer';
 import Header from './Components/MainComponents/Header';
-import './App.scss';
+import styles from './App.module.scss';
+
+const cx = classNames.bind(styles);
 
 const App: React.FC = () => {
    return (
-      <div className="wrapper">
-         <div className="header">
+      <div className={cx('wrapper')}>
+         <div className={cx('header')}>
             <Header />
          </div>
-         <div className="banner">
-            
-         </div>
-         <div className="content">
+         <div className={cx('banner')}></div>
+         <div className={cx('content')}>
             <Content />
          </div>
-         <div className="footer" id="footer">
+         <div className={cx('footer')}>
             <Footer />
          </div>
       </div>
