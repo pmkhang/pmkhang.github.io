@@ -12,15 +12,14 @@
 .my-info {
    display: flex;
    flex-direction: column;
-   margin: 0px 4px 20px 4px;
+   margin: 0px 0px 20px;
 }
 .title {
    font-size: 3rem;
-
    margin-bottom: 10px;
 }
 .info {
-   margin: 10px 0;
+   padding: 10px 0;
    font-size: 1.6rem;
    font-weight: 600;
    color: var(--primary);
@@ -41,7 +40,7 @@
 .contact-input,
 .contact-textarea {
    width: 100%;
-   margin: 6px 4px;
+   margin: 6px 0;
    padding: 16px;
    border: 2px solid var(--primary);
    border-radius: 5px;
@@ -49,7 +48,12 @@
    font-weight: 600;
    outline: none;
    transition: 0.3s all linear;
-
+   &.email {
+      margin-right: 6px;
+   }
+   &.phone {
+      margin-left: 6px;
+   }
    &::placeholder {
       font-size: 1.4rem;
       font-weight: 600;
@@ -61,13 +65,13 @@
 }
 
 .contact-textarea {
-   min-width: calc(100% - 10px);
+   min-width: 100%;
    min-height: 140px;
 }
 
 .send-btn {
    width: 100%;
-   margin: 8px 4px;
+   margin: 6px 0;
    padding: 10px;
    border-radius: 5px;
    color: var(--white);

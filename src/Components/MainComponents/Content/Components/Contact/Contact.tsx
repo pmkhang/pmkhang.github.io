@@ -76,7 +76,7 @@ const Contact: React.FC = () => {
                      </div>
                      <div className={cx('contact-group')}>
                         <input
-                           className={cx('contact-input')}
+                           className={cx('contact-input', 'email')}
                            type="email"
                            id="email"
                            name="Email"
@@ -87,7 +87,7 @@ const Contact: React.FC = () => {
                            spellCheck
                         />
                         <input
-                           className={cx('contact-input')}
+                           className={cx('contact-input', 'phone')}
                            type="tel"
                            id="phone"
                            name="Phone"
@@ -111,7 +111,7 @@ const Contact: React.FC = () => {
                            id="title"
                            name="Title"
                            required
-                           placeholder="Enter the title"
+                           placeholder="Your title"
                            disabled={loading}
                         />
                      </div>

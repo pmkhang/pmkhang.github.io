@@ -6,9 +6,9 @@ const cx = classNames.bind(styles);
 
 const Portfolio: React.FC = () => {
    return (
-      <div id="portfolio" className={cx('wrapper')}>
+      <section id="portfolio" className={cx('wrapper')}>
          <h1>Portfolio</h1>
-      </div>
+      </section>
    );
 };
 
