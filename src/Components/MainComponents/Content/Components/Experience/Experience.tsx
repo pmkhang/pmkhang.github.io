@@ -7,9 +7,9 @@ const cx = classNames.bind(styles);
 
 const Experience: React.FC = () => {
    return (
-      <div id="experience" className={cx('wrapper')}>
+      <section id="experience" className={cx('wrapper')}>
          <h1>Experience</h1>
-      </div>
+      </section>
    );
 };
 

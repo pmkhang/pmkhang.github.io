@@ -2,9 +2,9 @@ import React from 'react';
 
 const Footer: React.FC = () => {
    return (
-      <div style={{ minHeight: '500px' }}>
+      <section style={{ minHeight: '500px' }}>
          <h1>Footer</h1>
-      </div>
+      </section>
    );
 };
 

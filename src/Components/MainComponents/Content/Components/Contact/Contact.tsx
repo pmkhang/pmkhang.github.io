@@ -40,7 +40,7 @@ const Contact: React.FC = () => {
    };
 
    return (
-      <div className={cx('wrapper')} id="contact">
+      <section className={cx('wrapper')} id="contact">
          <Grid>
             <Row>
                <Col size={['l-4', 'm-12', 's-12']}>
@@ -71,6 +71,7 @@ const Contact: React.FC = () => {
                            required
                            placeholder="Your name"
                            disabled={loading}
+                           spellCheck
                         />
                      </div>
                      <div className={cx('contact-group')}>
@@ -81,7 +82,9 @@ const Contact: React.FC = () => {
                            name="Email"
                            required
                            placeholder="Your email"
+                           pattern="\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}\b"
                            disabled={loading}
+                           spellCheck
                         />
                         <input
                            className={cx('contact-input')}
@@ -89,8 +92,16 @@ const Contact: React.FC = () => {
                            id="phone"
                            name="Phone"
                            required
-                           placeholder="Your phone-number"
+                           placeholder="Your phone number"
+                           pattern="(\+\d{1,3}\s?)?(\(\d{1,3}\)\s?)?[\d\s-]{8,}"
                            disabled={loading}
+                           onKeyPress={(event) => {
+                              const keyCode = event.which ? event.which : event.keyCode;
+                              const isValidKey = /[0-9+]/.test(String.fromCharCode(keyCode));
+                              if (!isValidKey) {
+                                 event.preventDefault();
+                              }
+                           }}
                         />
                      </div>
                      <div className={cx('contact-group')}>
@@ -129,7 +140,7 @@ const Contact: React.FC = () => {
                </Col>
             </Row>
          </Grid>
-      </div>
+      </section>
    );
 };
 

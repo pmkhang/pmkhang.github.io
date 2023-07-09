@@ -10,7 +10,7 @@ import Contact from './Components/Contact';
 const cx = classNames.bind(styles);
 const Content = () => {
    return (
-      <div className={cx('wrapper')}>
+      <section className={cx('wrapper')}>
          <div className={cx('container')}>
             <AboutMe />
          </div>
@@ -29,7 +29,7 @@ const Content = () => {
          <div className={cx('container')}>
             <Contact />
          </div>
-      </div>
+      </section>
    );
 };
 

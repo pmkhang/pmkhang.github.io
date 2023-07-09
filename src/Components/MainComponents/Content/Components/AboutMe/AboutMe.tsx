@@ -7,7 +7,7 @@ import { Col, Grid, Row } from 'GridSystem - typescript';
 const cx = classNames.bind(styles);
 const AboutMe: React.FC = () => {
    return (
-      <div id="aboutme" className={cx('wrapper')}>
+      <section id="aboutme" className={cx('wrapper')}>
          <Grid>
             <Row>
                <Col size={['l-8', 'm-8', 's-12']}>
@@ -18,7 +18,7 @@ const AboutMe: React.FC = () => {
                </Col>
             </Row>
          </Grid>
-      </div>
+      </section>
    );
 };
 

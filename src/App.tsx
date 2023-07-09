@@ -11,16 +11,16 @@ const cx = classNames.bind(styles);
 const App: React.FC = () => {
    return (
       <div className={cx('wrapper')}>
-         <div className={cx('header')}>
+         <header className={cx('header')}>
             <Header />
-         </div>
+         </header>
          <div className={cx('banner')}></div>
-         <div className={cx('content')}>
+         <main className={cx('content')}>
             <Content />
-         </div>
-         <div className={cx('footer')}>
+         </main>
+         <footer className={cx('footer')}>
             <Footer />
-         </div>
+         </footer>
       </div>
    );
 };
