@@ -10,10 +10,10 @@ const AboutMe: React.FC = () => {
       <div id="aboutme" className={cx('wrapper')}>
          <Grid>
             <Row>
-               <Col size={['l-8','m-8','s-12']}>
+               <Col size={['l-8', 'm-8', 's-12']}>
                   <div className={cx('box')}></div>
                </Col>
-               <Col size={['l-4','m-4','s-12']}>
+               <Col size={['l-4', 'm-4', 's-12']}>
                   <div className={cx('box')}></div>
                </Col>
             </Row>

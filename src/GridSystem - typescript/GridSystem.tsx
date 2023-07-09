@@ -13,7 +13,7 @@ export const Grid: React.FC<GridProps> = ({ children }) => {
 };
 
 export const GridWide: React.FC<GridProps> = ({ children }) => {
-   return <div className={cx('grid', 'wide-grid')}>{children}</div>;
+   return <div className={cx('grid', 'wide')}>{children}</div>;
 };
 
 export const Row: React.FC<GridProps> = ({ children }) => {
