@@ -25,10 +25,6 @@ html {
    scroll-behavior: smooth;
 }
 
-html body {
-   overflow-y: overlay;
-}
-
 body {
    font-size: 1.6rem;
    line-height: 1.5;
@@ -37,15 +33,22 @@ body {
 
 //scrollbar css
 
-html *::-webkit-scrollbar {
-   border-radius: 0;
+/* Ẩn thanh cuộn mặc định trên toàn trang */
+body::-webkit-scrollbar {
    width: 8px;
-   padding-left: 5px;
+   background-color: transparent;
 }
 
-html *::-webkit-scrollbar-thumb {
-   border-radius: 4px;
-   background-color: rgba(0, 0, 0, 0.26);
+/* Ẩn các chỉ mục của thanh cuộn */
+body::-webkit-scrollbar-thumb {
+   border-radius: 30px;
+   background-color: #b9b9b9;
+
+}
+
+/* Định dạng nội dung để có thể cuộn */
+body {
+   overflow: auto;
 }
 button,
 input,

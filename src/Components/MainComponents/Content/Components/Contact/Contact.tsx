@@ -9,6 +9,14 @@ import { Col, Grid, Row } from 'GridSystem - typescript';
 
 const cx = classNames.bind(styles);
 
+interface ContactFormData extends FormData {
+   Name: string;
+   Email: string;
+   Phone: string;
+   Title: string;
+   Message: string;
+}
+
 const Contact: React.FC = () => {
    const scriptURL =
       'https://script.google.com/macros/s/AKfycbzZBVjGp28Io4c5e7IZM0RxA0axh7fFGEfEwk-PHXniVUleyJdz_52NbQD-pwobt0-u/exec';
@@ -21,7 +29,8 @@ const Contact: React.FC = () => {
       setLoading(true);
 
       try {
-         await axios.post(scriptURL, new FormData(event.currentTarget));
+         const formData = new FormData(event.currentTarget) as ContactFormData;
+         await axios.post(scriptURL, formData);
          handleResetForm();
          setAlertMessage('Thank you for contacting me!');
          alert('Submitted successfully!');
@@ -58,6 +67,7 @@ const Contact: React.FC = () => {
                         </span>
                         +84 779066965
                      </a>
+                     
                   </div>
                </Col>
                <Col size={['l-8', 'm-12', 's-12']}>

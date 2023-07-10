@@ -14,6 +14,13 @@ const Navbar: React.FC = () => {
    const handleMenuToggle = () => {
       setIsActive(!isActive);
    };
+   const handleLinkClick = () => {
+      setIsActive(false);
+      const checkbox = document.getElementById('show-hide-navbar') as HTMLInputElement;
+      if (checkbox) {
+         checkbox.checked = false;
+      }
+   };
 
    return (
       <>
@@ -47,7 +54,7 @@ const Navbar: React.FC = () => {
             </ul>
          </nav>
          <label
-            htmlFor="responsive-nav__on-off"
+            htmlFor="show-hide-navbar"
             className={cx('menu-toggle', { active: isActive })}
             onClick={handleMenuToggle}
          >
@@ -55,6 +62,71 @@ const Navbar: React.FC = () => {
             <div className={cx('bar')}></div>
             <div className={cx('bar')}></div>
          </label>
+         <input type="checkbox" name="" id="show-hide-navbar" className={cx('menu-toggle', 'hiden')} hidden />
+         <nav className={cx('mobile-navbar')}>
+            <ul className={cx('mobile-navbar-list')}>
+               <li className={cx('mobile-navbar-item')}>
+                  <Link
+                     className={cx('mobile-navbar-link')}
+                     onClick={handleLinkClick}
+                     to="aboutme"
+                     offset={-70}
+                     smooth={true}
+                     duration={50}
+                  >
+                     About Me
+                  </Link>
+               </li>
+               <li className={cx('mobile-navbar-item')}>
+                  <Link
+                     className={cx('mobile-navbar-link')}
+                     onClick={handleLinkClick}
+                     to="education"
+                     offset={-70}
+                     smooth={true}
+                     duration={50}
+                  >
+                     Education
+                  </Link>
+               </li>
+               <li className={cx('mobile-navbar-item')}>
+                  <Link
+                     className={cx('mobile-navbar-link')}
+                     onClick={handleLinkClick}
+                     to="experience"
+                     offset={-70}
+                     smooth={true}
+                     duration={50}
+                  >
+                     Experience
+                  </Link>
+               </li>
+               <li className={cx('mobile-navbar-item')}>
+                  <Link
+                     className={cx('mobile-navbar-link')}
+                     onClick={handleLinkClick}
+                     to="portfolio"
+                     offset={-70}
+                     smooth={true}
+                     duration={50}
+                  >
+                     Portfolio
+                  </Link>
+               </li>
+               <li className={cx('mobile-navbar-item')}>
+                  <Link
+                     className={cx('mobile-navbar-link')}
+                     onClick={handleLinkClick}
+                     to="contact"
+                     offset={-70}
+                     smooth={true}
+                     duration={50}
+                  >
+                     Contact
+                  </Link>
+               </li>
+            </ul>
+         </nav>
       </>
    );
 };
