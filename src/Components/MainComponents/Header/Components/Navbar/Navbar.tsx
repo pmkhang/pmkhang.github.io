@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 
 import classNames from 'classnames/bind';
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-scroll';
 
 import styles from './Navbar.module.scss';
@@ -10,7 +10,7 @@ const cx = classNames.bind(styles);
 
 const Navbar: React.FC = () => {
    const [isActive, setIsActive] = useState(false);
-   const mobileNavbarRef = useRef<HTMLDivElement>(null);
+   const [menuVisible, setMenuVisible] = useState(false);
 
    const handleMenuToggle = () => {
       setIsActive(!isActive);
@@ -22,23 +22,9 @@ const Navbar: React.FC = () => {
          checkbox.checked = false;
       }
    };
-
-   const handleClickOutside = (event: MouseEvent) => {
-      if (mobileNavbarRef.current && !mobileNavbarRef.current.contains(event.target as Node)) {
-         setIsActive(false);
-         const checkbox = document.getElementById('show-hide-navbar') as HTMLInputElement;
-         if (checkbox) {
-            checkbox.checked = false;
-         }
-      }
+   const handleToggleMenu = () => {
+      setMenuVisible(!menuVisible);
    };
-
-   useEffect(() => {
-      document.addEventListener('mousedown', handleClickOutside);
-      return () => {
-         document.removeEventListener('mousedown', handleClickOutside);
-      };
-   }, []);
 
    return (
       <>
@@ -81,7 +67,12 @@ const Navbar: React.FC = () => {
             <div className={cx('bar')}></div>
          </label>
          <input type="checkbox" name="" id="show-hide-navbar" className={cx('menu-toggle', 'hiden')} hidden />
-         <nav className={cx('mobile-navbar')} ref={mobileNavbarRef}>
+         <label
+            htmlFor="show-hide-navbar"
+            className={cx('overlay', { active: isActive })}
+            onClick={handleMenuToggle}
+         ></label>
+         <nav className={cx('mobile-navbar')}>
             <ul className={cx('mobile-navbar-list')}>
                <li className={cx('mobile-navbar-item')}>
                   <Link

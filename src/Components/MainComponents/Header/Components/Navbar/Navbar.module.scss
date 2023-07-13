@@ -51,10 +51,14 @@
 .bar {
    width: 100%;
    height: 4px;
-   background-color: var(--text-color);
+   background-color: var(--primary);
    margin-bottom: 4px;
    transition: transform 0.5s ease;
    border-radius: 15px;
+}
+
+.menu-toggle .bar:nth-child(2) {
+   width: 70%;
 }
 
 .menu-toggle.active .bar:nth-child(2) {
@@ -121,7 +125,7 @@
    padding: 10px 0;
    border-radius: 3px;
    &:active {
-      background-color: #ccc;
+      background-color: var(--primary);
    }
 }
 
@@ -129,9 +133,23 @@
    padding: 0 50px;
    font-size: 2rem;
    font-weight: 500;
+   &:active {
+      color: var(--white);
+   }
 }
 .menu-toggle.hiden {
    display: none;
+}
+.overlay {
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   display: none;
+}
+.menu-toggle:checked ~ .overlay {
+   display: block;
 }
 
 .menu-toggle:checked ~ .mobile-navbar {
