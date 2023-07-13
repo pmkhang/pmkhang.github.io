@@ -10,8 +10,7 @@ const cx = classNames.bind(styles);
 
 const Navbar: React.FC = () => {
    const [isActive, setIsActive] = useState(false);
-   const [menuVisible, setMenuVisible] = useState(false);
-
+   
    const handleMenuToggle = () => {
       setIsActive(!isActive);
    };
@@ -22,9 +21,7 @@ const Navbar: React.FC = () => {
          checkbox.checked = false;
       }
    };
-   const handleToggleMenu = () => {
-      setMenuVisible(!menuVisible);
-   };
+   
 
    return (
       <>
