@@ -103,7 +103,7 @@
    top: 58px;
    right: 20px;
    border-radius: 10px;
-   box-shadow: 0px 10px 10px 1px rgba($color: #000000, $alpha: 0.5);
+   box-shadow: var(--box-shadow-bottom);
    animation: scale-out-tr 0.3s ease-in-out forwards;
    display: none;
    z-index: 1;
@@ -121,8 +121,7 @@
    display: flex;
    flex-direction: column;
    align-items: center;
-   width: 100%;
-   padding: 10px 0;
+   justify-content: space-around;
    border-radius: 3px;
    &:active {
       background-color: var(--primary);
@@ -130,9 +129,11 @@
 }
 
 .mobile-navbar-link {
-   padding: 0 50px;
+   width: 100%;
+   padding: 8px 52px;
    font-size: 2rem;
    font-weight: 500;
+   text-align: center;
    &:active {
       color: var(--white);
    }
