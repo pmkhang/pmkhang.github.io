@@ -1,5 +1,3 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
-
 import classNames from 'classnames/bind';
 import React, { useState } from 'react';
 import { Link } from 'react-scroll';
@@ -10,7 +8,7 @@ const cx = classNames.bind(styles);
 
 const Navbar: React.FC = () => {
    const [isActive, setIsActive] = useState(false);
-   
+
    const handleMenuToggle = () => {
       setIsActive(!isActive);
    };
@@ -21,7 +19,6 @@ const Navbar: React.FC = () => {
          checkbox.checked = false;
       }
    };
-   
 
    return (
       <>
