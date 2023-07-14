@@ -12,7 +12,7 @@ const AboutMe: React.FC = () => {
    useEffect(() => {
       if (typedElementRef.current) {
          const typingEffect = new Typed(typedElementRef.current, {
-            strings: ['Pham Minh Khang', 'a Front-End Developer', 'a Graphic, UI-UX Designer'],
+            strings: ['PHAM MINH KHANG', 'a Front-End Developer', 'a Graphic, UI-UX Designer'],
             typeSpeed: 35,
             backSpeed: 35,
             backDelay: 1000,
