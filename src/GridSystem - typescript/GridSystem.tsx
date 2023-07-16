@@ -20,6 +20,10 @@ export const Row: React.FC<GridProps> = ({ children }) => {
    return <div className={cx('row')}>{children}</div>;
 };
 
+export const RowNoGutter: React.FC<GridProps> = ({ children }) => {
+   return <div className={cx('row','no-gutters')}>{children}</div>;
+};
+
 interface ColProps {
    size: string[];
    offset?: string[];

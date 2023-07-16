@@ -1,9 +1,10 @@
 import classNames from 'classnames/bind';
 import React, { useEffect, useRef } from 'react';
+import Typed from 'typed.js';
 
 import styles from './AboutMe.module.scss';
 import { Col, Grid, Row } from 'GridSystem - typescript';
-import Typed from 'typed.js';
+import bran from '../../../../../Assets/Images/brain.svg'
 
 const cx = classNames.bind(styles);
 const AboutMe: React.FC = () => {
@@ -29,29 +30,29 @@ const AboutMe: React.FC = () => {
       <section id="aboutme" className={cx('wrapper')}>
          <Grid>
             <Row>
-               <Col size={['l-7', 'm-7', 's-12']}>
-                  <div className={cx('info')}>
-                     <h2>Hello!</h2>
-                     <div className={cx('info-text')}>
-                        <h2>I'm</h2>
-                        <h2>
-                           <strong ref={typedElementRef} className={cx('multi-text')}>
-                              {' '}
-                           </strong>
-                        </h2>
+                  <Col size={['l-6', 'm-12', 's-12']}>
+                     <div className={cx('info')}>
+                        <h2 className={cx('greeting')}>Hello!</h2>
+                        <div className={cx('info-text')}>
+                           <h2>I'm</h2>
+                           <h2>
+                              <strong ref={typedElementRef} className={cx('multi-text')}>
+                                 {' '}
+                              </strong>
+                           </h2>
+                        </div>
+                        <strong className={cx('info-description')}>
+                           As a proficient Front-End Developer with expertise in HTML, CSS , JavaScript and React, and a
+                           talented Graphic, UI-UX Designer with a deep understanding of visual design principles and have
+                           experience using tools such as Adobe Photoshop, Illustrator, InDesign and Figma.
+                        </strong>
                      </div>
-                  </div>
-                  <div>
-                     <strong>
-                        As a proficient Front-End Developer with expertise in HTML, CSS , JavaScript and React, and a
-                        talented Graphic, UI-UX Designer with a deep understanding of visual design principles and have
-                        experience using tools such as Adobe Photoshop, Illustrator, InDesign and Figma.
-                     </strong>
-                  </div>
-               </Col>
-               <Col size={['l-5', 'm-5', 's-12']}>
-                  <div className={cx('box')}></div>
-               </Col>
+                  </Col>
+                  <Col size={['l-6', 'm-12', 's-12']}>
+                     <div className={cx('img-desc')}>
+                        <img src={bran} alt="" />
+                     </div>
+                  </Col>
             </Row>
          </Grid>
       </section>
