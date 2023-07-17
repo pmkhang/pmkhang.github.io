@@ -4,7 +4,7 @@ import Typed from 'typed.js';
 
 import styles from './AboutMe.module.scss';
 import { Col, Grid, Row } from 'GridSystem - typescript';
-import bran from '../../../../../Assets/Images/brain.svg'
+import brian from '../../../../../Assets/Images/brain.svg'
 
 const cx = classNames.bind(styles);
 const AboutMe: React.FC = () => {
@@ -50,7 +50,7 @@ const AboutMe: React.FC = () => {
                   </Col>
                   <Col size={['l-6', 'm-12', 's-12']}>
                      <div className={cx('img-desc')}>
-                        <img src={bran} alt="" />
+                        <img src={brian} alt="" />
                      </div>
                   </Col>
             </Row>
