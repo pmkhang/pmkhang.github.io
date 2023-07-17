@@ -54,7 +54,8 @@ const Contact: React.FC = () => {
             <Row>
                <Col size={['l-4', 'm-12', 's-12']}>
                   <div className={cx('my-info')}>
-                     <h2 className={cx('title')}>Contact for Work</h2>
+                     <h2 className={cx('title')}>Let's work together</h2>
+                     <span className={cx('title-desc')}>Feel free to get in touch with me. I am always open to discussing new projects, creative ideas or opportunities to be part of your visions.</span>
                      <a className={cx('info')} href="mailto:pham.m.khang.98@gmail.com">
                         <span className={cx('icon')}>
                            <FontAwesomeIcon icon={faEnvelope} />

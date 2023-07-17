@@ -4,7 +4,7 @@ import Typed from 'typed.js';
 
 import styles from './AboutMe.module.scss';
 import { Col, Grid, Row } from 'GridSystem - typescript';
-import brian from '../../../../../Assets/Images/brain.svg';
+import brian from '~/Assets/Images/brain.svg';
 
 const cx = classNames.bind(styles);
 const AboutMe: React.FC = () => {
@@ -36,9 +36,7 @@ const AboutMe: React.FC = () => {
                      <div className={cx('info-text')}>
                         <h2>I'm</h2>
                         <h2>
-                           <strong ref={typedElementRef} className={cx('multi-text')}>
-                              {' '}
-                           </strong>
+                           <strong ref={typedElementRef} className={cx('multi-text')}></strong>
                         </h2>
                      </div>
                      <strong className={cx('info-description')}>

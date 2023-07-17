@@ -1,4 +1,13 @@
 .wrapper {
    max-width: 1200px;
+   height: auto;
    margin: 0 auto;
+   padding: 20px;
+}
+
+.box {
+   width: 100%;
+   min-height: 500px;
+   background-color: var(--primary);
+   border-radius: 10px;
 }
