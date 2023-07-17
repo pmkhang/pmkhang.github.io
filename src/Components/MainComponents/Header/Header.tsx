@@ -4,7 +4,7 @@ import { Link } from 'react-scroll';
 import styles from './Header.module.scss';
 import Navbar from './Components/Navbar';
 
-import logo from '../../../Assets/Images/logo.png';
+import logo from '~/Assets/Images/logo2.svg';
 
 const cx = classNames.bind(styles);
 
