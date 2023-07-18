@@ -5,9 +5,99 @@
    padding: 20px;
 }
 
-.box {
-   width: 100%;
-   min-height: 500px;
+.school-info {
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   margin: 120px 0;
+   padding: 20px;
+   border: 4px solid var(--primary);
+   border-radius: 15px;
+}
+.school-logo {
+   position: absolute;
+   top: -60%;
+   left: 50%;
+   transform: translate(-50%, +50%);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: 10px;
+   background-color: var(--white);
+   .logo {
+      height: 160px;
+      object-fit: cover;
+   }
+}
+
+.school-time {
+   margin-top: 100px;
+   padding: 10px 30px;
+   color: var(--white);
    background-color: var(--primary);
    border-radius: 10px;
+   .time {
+      font-size: 2rem;
+      font-weight: 600;
+   }
+}
+.school {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-around;
+   margin-top: 20px;
+   .school-name {
+      color: var(--primary);
+      font-size: 2.8rem;
+   }
+   .school-major {
+      font-weight: 600;
+      font-size: 2.2rem;
+   }
+   .school-specialize {
+      font-size: 2rem;
+   }
+}
+
+@media (max-width: 1023px) {
+   .school-info {
+      margin: 100px 0;
+   }
+}
+
+@media (max-width: 739px) {
+   .school-info {
+      margin: 60px 0;
+   }
+   .school-logo {
+      top: -45%;
+      left: 50%;
+      transform: translate(-50%, +50%);
+      .logo {
+         height: 100px;
+         object-fit: cover;
+      }
+   }
+
+   .school-time {
+      margin-top: 80px;
+      .time {
+         font-size: 1.8rem;
+      }
+   }
+
+   .school {
+      .school-name {
+         font-size: 2rem;
+      }
+      .school-major {
+         font-weight: 600;
+         font-size: 1.8rem;
+      }
+      .school-specialize {
+         font-size: 1.6rem;
+      }
+   }
 }
