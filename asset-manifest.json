@@ -1,17 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.03ad0254.css",
-    "main.js": "/static/js/main.96ada737.js",
+    "main.css": "/static/css/main.a8792b61.css",
+    "main.js": "/static/js/main.f82da5f6.js",
     "static/js/787.d15f828a.chunk.js": "/static/js/787.d15f828a.chunk.js",
     "static/media/brain.svg": "/static/media/brain.420b4d9086841eb269efc2540258b954.svg",
+    "static/media/Logo-Aptech-Sua.webp": "/static/media/Logo-Aptech-Sua.ad20647e5af969077af9.webp",
+    "static/media/logoTDC.svg": "/static/media/logoTDC.895952abb4e6cea22151d825e3733f40.svg",
     "static/media/logo2.svg": "/static/media/logo2.83b8c3564a536d0bd9c4c8ed196660ed.svg",
     "index.html": "/index.html",
-    "main.03ad0254.css.map": "/static/css/main.03ad0254.css.map",
-    "main.96ada737.js.map": "/static/js/main.96ada737.js.map",
+    "main.a8792b61.css.map": "/static/css/main.a8792b61.css.map",
+    "main.f82da5f6.js.map": "/static/js/main.f82da5f6.js.map",
     "787.d15f828a.chunk.js.map": "/static/js/787.d15f828a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.03ad0254.css",
-    "static/js/main.96ada737.js"
+    "static/css/main.a8792b61.css",
+    "static/js/main.f82da5f6.js"
   ]
 }
