@@ -15,7 +15,7 @@ const Education: React.FC = () => {
                <Col size={['l-6', 'm-12', 's-12']}>
                   <div className={cx('school-info')}>
                      <div className={cx('school-logo')}>
-                        <img className={cx('logo')} src={logoTDC} alt="" />
+                        <img className={cx('logo')} src={logoTDC} alt="logoTDC" />
                      </div>
                      <div className={cx('school-time')}>
                         <span className={cx('time')}>2019 - 2022</span>
@@ -30,7 +30,7 @@ const Education: React.FC = () => {
                <Col size={['l-6', 'm-12', 's-12']}>
                   <div className={cx('school-info')}>
                      <div className={cx('school-logo')}>
-                        <img className={cx('logo')} src={logoAptech} alt="" />
+                        <img className={cx('logo')} src={logoAptech} alt="logoAptech" />
                      </div>
                      <div className={cx('school-time')}>
                         <span className={cx('time')}>2023 - Present</span>
