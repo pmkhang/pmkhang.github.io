@@ -36,9 +36,8 @@ interface ColProps extends GridProps {
 
 export const Col: React.FC<ColProps> = ({ size, offset, children, className }) => {
    const colClasses = size.map((s) => cx('col', s));
-   const offsetClasses = offset && offset.map((o) => cx(`offset-${o.replace('-o-', '-')}`));
+   const offsetClasses = offset && offset.map((o) => cx(o));
    const colClassName = cx(colClasses, offsetClasses, className); 
-
    return <div className={colClassName}>{children}</div>;
 };
 
