@@ -10,7 +10,7 @@
 
 :root {
    --primary: #781f4c;
-   --black: #000;
+   --black: #4d4d4d;
    --white: #fff;
    --text-color: #2c2c30;
    --font-family: 'Quicksand', sans-serif;
@@ -71,6 +71,6 @@ input[type='submit'] {
 }
 
 ::selection {
-   background-color: var(--primary);
+   background-color: var(--black);
    color: var(--white);
 }

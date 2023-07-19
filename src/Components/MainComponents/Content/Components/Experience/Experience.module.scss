@@ -1,21 +1,113 @@
 .wrapper {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+   max-width: 1200px;
+   margin: 0 auto;
+   padding: 20px;
+}
+.flex {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   margin: 40px 0;
 }
 
-
 .title {
-    margin-bottom: 20px;
-    font-size: 3rem;
-    font-weight: 500;
-    text-align: center;
+   margin-bottom: 20px;
+   font-size: 3rem;
+   font-weight: 500;
+   text-align: center;
 }
 
 .box {
-    width: 100%;
-    height: 200px;
-    background-color: var(--primary);
-    border-radius: 10px;
-    margin-bottom: 16px;
+   position: relative;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 100%;
+   min-height: 150px;
+   margin-bottom: 16px;
+}
+
+.skill {
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-between;
+   width: 120px;
+   height: 120px;
+   padding: 20px;
+   border: 3px solid var(--primary);
+   border-radius: 50%;
+   margin-bottom: 20px;
+}
+.skill-img {
+   position: absolute;
+   top: -30%;
+   height: 90px;
+   padding: 0 10px 10px;
+   background-color: var(--white);
+   .img {
+      top: -30%;
+      height: 90px;
+      padding: 0 0 10px;
+      filter: drop-shadow(2px 5px 2px rgba(0, 0, 0, 0.4));
+
+   }
+}
+.skill-name {
+   margin-top: 40px;
+   line-height: 2rem;
+   font-size: 2.4rem;
+}
+.skill-desc {
+   font-size: 1.6rem;
+}
+.skill-percent {
+   width: 80%;
+}
+.percent {
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   justify-content: center;
+   width: 100%;
+   height: 50px;
+   border: 3px solid var(--primary);
+   border-radius: 30px;
+}
+.percent-90,
+.percent-85,
+.percent-80,
+.percent-75,
+.percent-70 {
+   display: flex;
+   flex-direction: column;
+   align-items: flex-end;
+   justify-content: center;
+   height: 35px;
+   margin-left: 5px;
+   color: var(--white);
+   background-color: var(--primary);
+   border-radius: 30px;
+   span {
+      margin-right: 10px;
+      font-weight: 600;
+   }
+}
+
+.percent-90 {
+   width: 90%;
+}
+.percent-85 {
+   width: 85%;
+}
+.percent-80 {
+   width: 80%;
+}
+.percent-75 {
+   width: 75%;
+}
+.percent-70 {
+   width: 70%;
 }
