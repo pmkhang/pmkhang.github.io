@@ -55,7 +55,10 @@ const Contact: React.FC = () => {
                <Col size={['l-4', 'm-12', 's-12']}>
                   <div className={cx('my-info')}>
                      <h2 className={cx('title')}>Let's work together</h2>
-                     <span className={cx('title-desc')}>Feel free to get in touch with me. I am always open to discussing new projects, creative ideas or opportunities to be part of your visions.</span>
+                     <span className={cx('title-desc')}>
+                        Feel free to get in touch with me. I am always open to discussing new projects, creative ideas
+                        or opportunities to be part of your visions.
+                     </span>
                      <a className={cx('info')} href="mailto:pham.m.khang.98@gmail.com">
                         <span className={cx('icon')}>
                            <FontAwesomeIcon icon={faEnvelope} />
@@ -68,11 +71,12 @@ const Contact: React.FC = () => {
                         </span>
                         +84 779066965
                      </a>
-                     
                   </div>
                </Col>
                <Col size={['l-8', 'm-12', 's-12']}>
                   <form ref={formRef} id="contact-form" name="data" onSubmit={handleSubmit}>
+                     <h2 className={cx('title')}>Get in touch</h2>
+
                      <div className={cx('contact-group')}>
                         <input
                            className={cx('contact-input')}
@@ -144,10 +148,8 @@ const Contact: React.FC = () => {
                            disabled={loading}
                         />
                      </div>
+                     <span className={cx('alert-message')}>{alertMessage}</span>
                   </form>
-                  <div className={cx('alert-message')}>
-                     <span>{alertMessage}</span>
-                  </div>
                </Col>
             </Row>
          </Grid>
