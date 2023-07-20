@@ -1,11 +1,12 @@
 {
   "files": {
-    "main.css": "/static/css/main.fe1ef7f8.css",
-    "main.js": "/static/js/main.377790ba.js",
+    "main.css": "/static/css/main.c9c38735.css",
+    "main.js": "/static/js/main.bb02dfde.js",
     "static/js/787.d15f828a.chunk.js": "/static/js/787.d15f828a.chunk.js",
     "static/media/brain.svg": "/static/media/brain.420b4d9086841eb269efc2540258b954.svg",
     "static/media/photoshop.svg": "/static/media/photoshop.b43e1dc74fd9949ae81524d7689820de.svg",
     "static/media/logoAptech.svg": "/static/media/logoAptech.198a592759e842a636b7e1ce059a4d15.svg",
+    "static/media/logowname.svg": "/static/media/logowname.7c5043963f14016cd797b174564260af.svg",
     "static/media/logoTDC.svg": "/static/media/logoTDC.895952abb4e6cea22151d825e3733f40.svg",
     "static/media/react.svg": "/static/media/react.2cc7cf9c50931097b9c0ec0b1195af70.svg",
     "static/media/html.svg": "/static/media/html.2bfe5f17ff87b2aa42ce6f49692bb628.svg",
@@ -16,12 +17,12 @@
     "static/media/illustrator.svg": "/static/media/illustrator.8d2cfdaee91b8eac531cb8dbc9564cc0.svg",
     "static/media/indesign.svg": "/static/media/indesign.4858428f924179c4acbbb780c27d66a8.svg",
     "index.html": "/index.html",
-    "main.fe1ef7f8.css.map": "/static/css/main.fe1ef7f8.css.map",
-    "main.377790ba.js.map": "/static/js/main.377790ba.js.map",
+    "main.c9c38735.css.map": "/static/css/main.c9c38735.css.map",
+    "main.bb02dfde.js.map": "/static/js/main.bb02dfde.js.map",
     "787.d15f828a.chunk.js.map": "/static/js/787.d15f828a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.fe1ef7f8.css",
-    "static/js/main.377790ba.js"
+    "static/css/main.c9c38735.css",
+    "static/js/main.bb02dfde.js"
   ]
 }
