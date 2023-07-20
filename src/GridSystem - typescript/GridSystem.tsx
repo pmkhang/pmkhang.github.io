@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react';
 import classNames from 'classnames/bind';
-import styles from './GridSystem.module.scss';
+import styles from './Grid.module.scss';
 
 const cx = classNames.bind(styles);
 

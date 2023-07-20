@@ -11,12 +11,7 @@ const Experience: React.FC = () => {
       <section id="experience" className={cx('wrapper')}>
          <Grid>
             <Row>
-               <Col size={['l-12', 'm-12', 's-12']}>
-                  <h3 className={cx('title')}>Skills Front-End</h3>
-               </Col>
-            </Row>
-            <Row>
-               <Col size={['l-3', 'm-6', 's-12']} className={cx('flex')}>
+               <Col size={['l-3', 'm-6', 's-6']} className={cx('flex')}>
                   <div className={cx('skill')}>
                      <div className={cx('skill-img')}>
                         <img className={cx('img')} src={images.html} alt="html" />
@@ -32,7 +27,7 @@ const Experience: React.FC = () => {
                      </div>
                   </div>
                </Col>
-               <Col size={['l-3', 'm-6', 's-12']} className={cx('flex')}>
+               <Col size={['l-3', 'm-6', 's-6']} className={cx('flex')}>
                   <div className={cx('skill')}>
                      <div className={cx('skill-img')}>
                         <img className={cx('img')} src={images.css} alt="css" />
@@ -48,7 +43,7 @@ const Experience: React.FC = () => {
                      </div>
                   </div>
                </Col>
-               <Col size={['l-3', 'm-6', 's-12']} className={cx('flex')}>
+               <Col size={['l-3', 'm-6', 's-6']} className={cx('flex')}>
                   <div className={cx('skill')}>
                      <div className={cx('skill-img')}>
                         <img className={cx('img')} src={images.js} alt="js" />
@@ -64,7 +59,7 @@ const Experience: React.FC = () => {
                      </div>
                   </div>
                </Col>
-               <Col size={['l-3', 'm-6', 's-12']} className={cx('flex')}>
+               <Col size={['l-3', 'm-6', 's-6']} className={cx('flex')}>
                   <div className={cx('skill')}>
                      <div className={cx('skill-img')}>
                         <img className={cx('img')} src={images.react} alt="react" />
@@ -82,12 +77,7 @@ const Experience: React.FC = () => {
                </Col>
             </Row>
             <Row>
-               <Col size={['l-12', 'm-12', 's-12']} className={cx('flex')}>
-                  <h3 className={cx('title')}>Skills Graphic Design</h3>
-               </Col>
-            </Row>
-            <Row>
-               <Col size={['l-3', 'm-6', 's-12']} className={cx('flex')}>
+               <Col size={['l-3', 'm-6', 's-6']} className={cx('flex')}>
                   <div className={cx('skill')}>
                      <div className={cx('skill-img')}>
                         <img className={cx('img')} src={images.ps} alt="ps" />
@@ -103,7 +93,7 @@ const Experience: React.FC = () => {
                      </div>
                   </div>
                </Col>
-               <Col size={['l-3', 'm-6', 's-12']} className={cx('flex')}>
+               <Col size={['l-3', 'm-6', 's-6']} className={cx('flex')}>
                   <div className={cx('skill')}>
                      <div className={cx('skill-img')}>
                         <img className={cx('img')} src={images.ai} alt="ai" />
@@ -119,7 +109,7 @@ const Experience: React.FC = () => {
                      </div>
                   </div>
                </Col>
-               <Col size={['l-3', 'm-6', 's-12']} className={cx('flex')}>
+               <Col size={['l-3', 'm-6', 's-6']} className={cx('flex')}>
                   <div className={cx('skill')}>
                      <div className={cx('skill-img')}>
                         <img className={cx('img')} src={images.id} alt="id" />
@@ -135,7 +125,7 @@ const Experience: React.FC = () => {
                      </div>
                   </div>
                </Col>
-               <Col size={['l-3', 'm-6', 's-12']} className={cx('flex')}>
+               <Col size={['l-3', 'm-6', 's-6']} className={cx('flex')}>
                   <div className={cx('skill')}>
                      <div className={cx('skill-img')}>
                         <img className={cx('img')} src={images.figma} alt="figma" />
@@ -150,11 +140,6 @@ const Experience: React.FC = () => {
                         </div>
                      </div>
                   </div>
-               </Col>
-            </Row>
-            <Row>
-               <Col size={['l-12', 'm-12', 's-12']}>
-                  <h2 className={cx('title')}>My Experience</h2>
                </Col>
             </Row>
             <Row>

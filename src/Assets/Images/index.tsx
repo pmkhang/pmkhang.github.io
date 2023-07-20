@@ -1,5 +1,6 @@
 const images = {
    logo: require('~/Assets/Images/logo2.svg').default,
+   logo2: require('~/Assets/Images/logowname.svg').default,
    html: require('~/Assets/Images/html.svg').default,
    css: require('~/Assets/Images/css.svg').default,
    js: require('~/Assets/Images/js.svg').default,
