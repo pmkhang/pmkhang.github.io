@@ -76,7 +76,7 @@ const Experience: React.FC = () => {
                   </div>
                </Col>
             </Row>
-            <Row>
+            <Row className={cx('graphic')}>
                <Col size={['l-3', 'm-6', 's-6']} className={cx('flex')}>
                   <div className={cx('skill')}>
                      <div className={cx('skill-img')}>

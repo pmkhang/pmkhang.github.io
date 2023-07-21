@@ -13,7 +13,7 @@ const Education: React.FC = () => {
          <Grid>
             <Row>
                <Col size={['l-6', 'm-12', 's-12']}>
-                  <div className={cx('school-info')}>
+                  <div className={cx('school-info', 'tdc')}>
                      <div className={cx('school-logo')}>
                         <img className={cx('logo')} src={logoTDC} alt="logoTDC" />
                      </div>

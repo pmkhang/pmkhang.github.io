@@ -71,6 +71,7 @@
 .skill-percent {
    width: 80%;
 }
+
 .percent {
    display: flex;
    flex-direction: column;
@@ -115,6 +116,22 @@
 }
 .percent-70 {
    width: 70%;
+}
+
+.graphic {
+   .skill {
+      border-color: var(--primary-opp);
+   }
+   .percent {
+      border-color: var(--primary-opp);
+   }
+   .percent-90,
+   .percent-85,
+   .percent-80,
+   .percent-75,
+   .percent-70 {
+      background-color: var(--primary-opp);
+   }
 }
 
 @media (max-width: 1023px) {
