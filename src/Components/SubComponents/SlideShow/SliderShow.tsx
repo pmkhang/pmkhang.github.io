@@ -24,7 +24,7 @@ const SlideShow: React.FC<SliderGalleryProps> = ({ images, className }) => {
       arrows: false,
       pagination: true,
       autoplay: true,
-      interval: 5000,
+      interval: 3000,
       pauseOnHover: true,
       perMove: 1,
    };

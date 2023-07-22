@@ -4,12 +4,17 @@
    justify-content: center;
 }
 .slide-img {
-   height: 500px;
+   width: 60%;
+   height: auto;
 }
 
 /* Ẩn pagination hoàn toàn */
 .splide__pagination {
-   top: 510px;
+   position: unset;
+   margin-top: 10px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
 }
 
 /* Đổi màu nền của dot khi active */
@@ -23,7 +28,35 @@
 /* Tùy chỉnh kích thước của các dot */
 .splide__pagination__page {
    width: 30px;
+   height: 6px !important;
    border-radius: 10px;
    margin: 0 5px;
    background-color: gray;
+}
+
+@media (max-width: 1023px) {
+   .slide-img {
+      width: 100%;
+      height: auto;
+   }
+}
+
+@media (max-width: 739px) {
+   .splide__pagination__page.is-active {
+      position: unset;
+      width: 20px;
+      height: 8px;
+      border-radius: 10px;
+      margin: 0 5px;
+      background-color: #2d2c2c;
+   }
+
+   /* Tùy chỉnh kích thước của các dot */
+   .splide__pagination__page {
+      width: 30px;
+      height: 6px;
+      border-radius: 10px;
+      margin: 0 5px;
+      background-color: gray;
+   }
 }
