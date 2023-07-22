@@ -1,9 +1,13 @@
 {
   "files": {
-    "main.css": "/static/css/main.69474f4d.css",
-    "main.js": "/static/js/main.9940b9a6.js",
-    "static/js/787.d15f828a.chunk.js": "/static/js/787.d15f828a.chunk.js",
+    "main.css": "/static/css/main.0b95d48c.css",
+    "main.js": "/static/js/main.ed1b0d60.js",
+    "static/js/787.a2aa7606.chunk.js": "/static/js/787.a2aa7606.chunk.js",
     "static/media/brain.svg": "/static/media/brain.420b4d9086841eb269efc2540258b954.svg",
+    "static/media/a3.png": "/static/media/a3.203dd0b64c567e4bda0f.png",
+    "static/media/a4.png": "/static/media/a4.d864a856c61616782bd2.png",
+    "static/media/a2.png": "/static/media/a2.ef9ce845916af76b1ce3.png",
+    "static/media/a1.png": "/static/media/a1.35222b2639d155e4af54.png",
     "static/media/photoshop.svg": "/static/media/photoshop.b43e1dc74fd9949ae81524d7689820de.svg",
     "static/media/logoAptech.svg": "/static/media/logoAptech.198a592759e842a636b7e1ce059a4d15.svg",
     "static/media/logowname.svg": "/static/media/logowname.7c5043963f14016cd797b174564260af.svg",
@@ -17,12 +21,12 @@
     "static/media/illustrator.svg": "/static/media/illustrator.8d2cfdaee91b8eac531cb8dbc9564cc0.svg",
     "static/media/indesign.svg": "/static/media/indesign.4858428f924179c4acbbb780c27d66a8.svg",
     "index.html": "/index.html",
-    "main.69474f4d.css.map": "/static/css/main.69474f4d.css.map",
-    "main.9940b9a6.js.map": "/static/js/main.9940b9a6.js.map",
-    "787.d15f828a.chunk.js.map": "/static/js/787.d15f828a.chunk.js.map"
+    "main.0b95d48c.css.map": "/static/css/main.0b95d48c.css.map",
+    "main.ed1b0d60.js.map": "/static/js/main.ed1b0d60.js.map",
+    "787.a2aa7606.chunk.js.map": "/static/js/787.a2aa7606.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.69474f4d.css",
-    "static/js/main.9940b9a6.js"
+    "static/css/main.0b95d48c.css",
+    "static/js/main.ed1b0d60.js"
   ]
 }
