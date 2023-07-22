@@ -1,0 +1,29 @@
+.slide-item {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.slide-img {
+   height: 500px;
+}
+
+/* Ẩn pagination hoàn toàn */
+.splide__pagination {
+   top: 510px;
+}
+
+/* Đổi màu nền của dot khi active */
+.splide__pagination__page.is-active {
+   width: 20px;
+   border-radius: 10px;
+   margin: 0 5px;
+   background-color: #2d2c2c;
+}
+
+/* Tùy chỉnh kích thước của các dot */
+.splide__pagination__page {
+   width: 30px;
+   border-radius: 10px;
+   margin: 0 5px;
+   background-color: gray;
+}

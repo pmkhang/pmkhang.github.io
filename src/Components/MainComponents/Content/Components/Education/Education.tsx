@@ -4,6 +4,8 @@ import styles from './Education.module.scss';
 import { Col, Grid, Row } from 'GridSystem - typescript';
 import logoTDC from '~/Assets/Images/logoTDC.svg';
 import logoAptech from '~/Assets/Images/logoAptech.svg';
+import SliderComponent from 'Components/SubComponents/SlideShow/SliderShow';
+import slider from 'Assets/Slider';
 
 const cx = classNames.bind(styles);
 
@@ -44,6 +46,7 @@ const Education: React.FC = () => {
                </Col>
             </Row>
          </Grid>
+         <SliderComponent className={cx('slider')} images={slider}/>
       </section>
    );
 };
