@@ -8,7 +8,6 @@ import styles from './Contact.module.scss';
 import { Col, Grid, Row } from 'GridSystem - typescript';
 import { useDarkMode } from 'DarkMode/DarkModeContext';
 
-
 const cx = classNames.bind(styles);
 
 interface ContactFormData extends FormData {
@@ -26,7 +25,6 @@ const Contact: React.FC = () => {
    const [loading, setLoading] = useState<boolean>(false);
    const formRef = useRef<HTMLFormElement>(null);
    const { darkMode } = useDarkMode();
-
 
    const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
       event.preventDefault();
@@ -83,7 +81,7 @@ const Contact: React.FC = () => {
 
                      <div className={cx('contact-group')}>
                         <input
-                           className={cx('contact-input', `${darkMode ? 'darkmode' : ''}` )}
+                           className={cx('contact-input', `${darkMode ? 'darkmode' : ''}`)}
                            type="text"
                            id="name"
                            name="Name"
@@ -95,7 +93,7 @@ const Contact: React.FC = () => {
                      </div>
                      <div className={cx('contact-group')}>
                         <input
-                           className={cx('contact-input', `${darkMode ? 'darkmode' : ''}` , 'email')}
+                           className={cx('contact-input', `${darkMode ? 'darkmode' : ''}`, 'email')}
                            type="email"
                            id="email"
                            name="Email"
@@ -106,7 +104,7 @@ const Contact: React.FC = () => {
                            spellCheck
                         />
                         <input
-                           className={cx('contact-input', `${darkMode ? 'darkmode' : ''}` , 'phone')}
+                           className={cx('contact-input', `${darkMode ? 'darkmode' : ''}`, 'phone')}
                            type="tel"
                            id="phone"
                            name="Phone"
@@ -125,7 +123,7 @@ const Contact: React.FC = () => {
                      </div>
                      <div className={cx('contact-group')}>
                         <input
-                           className={cx('contact-input', `${darkMode ? 'darkmode' : ''}` )}
+                           className={cx('contact-input', `${darkMode ? 'darkmode' : ''}`)}
                            type="text"
                            id="title"
                            name="Title"
@@ -146,7 +144,7 @@ const Contact: React.FC = () => {
                      </div>
                      <div className={cx('contact-group')}>
                         <input
-                           className={cx('send-btn' ,`${darkMode ? 'darkmode' : ''}`, { loading })}
+                           className={cx('send-btn', `${darkMode ? 'darkmode' : ''}`, { loading })}
                            type="submit"
                            value={loading ? 'SENDING...' : 'SEND'}
                            disabled={loading}
