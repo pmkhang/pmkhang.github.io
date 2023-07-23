@@ -23,6 +23,15 @@
    margin: 0 auto;
 }
 
+.banner {
+   width: 1200px;
+   margin: 100px auto 0;
+}
+.darkmode {
+   color: var(--text-darkmode);
+   background-color: var(--bg-darkmode);
+}
+
 @media (min-width: 740px) and (max-width: 1023px) {
    .content {
       margin: calc(var(--default-layout-header-height) + 10px) auto;

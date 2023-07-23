@@ -6,6 +6,8 @@ import { faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 import styles from './Contact.module.scss';
 import { Col, Grid, Row } from 'GridSystem - typescript';
+import { useDarkMode } from 'DarkMode/DarkModeContext';
+
 
 const cx = classNames.bind(styles);
 
@@ -23,6 +25,8 @@ const Contact: React.FC = () => {
    const [alertMessage, setAlertMessage] = useState<string>('');
    const [loading, setLoading] = useState<boolean>(false);
    const formRef = useRef<HTMLFormElement>(null);
+   const { darkMode } = useDarkMode();
+
 
    const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
       event.preventDefault();
@@ -59,13 +63,13 @@ const Contact: React.FC = () => {
                         Feel free to get in touch with me. I am always open to discussing new projects, creative ideas
                         or opportunities to be part of your visions.
                      </span>
-                     <a className={cx('info')} href="mailto:pham.m.khang.98@gmail.com">
+                     <a className={cx('info', `${darkMode ? 'darkmode' : ''}`)} href="mailto:pham.m.khang.98@gmail.com">
                         <span className={cx('icon')}>
                            <FontAwesomeIcon icon={faEnvelope} />
                         </span>
                         Pham.m.khang.98@gmail.com
                      </a>
-                     <a className={cx('info')} href="tel:+84779066965">
+                     <a className={cx('info', `${darkMode ? 'darkmode' : ''}`)} href="tel:+84779066965">
                         <span className={cx('icon')}>
                            <FontAwesomeIcon icon={faPhone} />
                         </span>
@@ -79,7 +83,7 @@ const Contact: React.FC = () => {
 
                      <div className={cx('contact-group')}>
                         <input
-                           className={cx('contact-input')}
+                           className={cx('contact-input', `${darkMode ? 'darkmode' : ''}` )}
                            type="text"
                            id="name"
                            name="Name"
@@ -91,7 +95,7 @@ const Contact: React.FC = () => {
                      </div>
                      <div className={cx('contact-group')}>
                         <input
-                           className={cx('contact-input', 'email')}
+                           className={cx('contact-input', `${darkMode ? 'darkmode' : ''}` , 'email')}
                            type="email"
                            id="email"
                            name="Email"
@@ -102,7 +106,7 @@ const Contact: React.FC = () => {
                            spellCheck
                         />
                         <input
-                           className={cx('contact-input', 'phone')}
+                           className={cx('contact-input', `${darkMode ? 'darkmode' : ''}` , 'phone')}
                            type="tel"
                            id="phone"
                            name="Phone"
@@ -121,7 +125,7 @@ const Contact: React.FC = () => {
                      </div>
                      <div className={cx('contact-group')}>
                         <input
-                           className={cx('contact-input')}
+                           className={cx('contact-input', `${darkMode ? 'darkmode' : ''}` )}
                            type="text"
                            id="title"
                            name="Title"
@@ -132,7 +136,7 @@ const Contact: React.FC = () => {
                      </div>
                      <div className={cx('contact-group')}>
                         <textarea
-                           className={cx('contact-textarea')}
+                           className={cx('contact-textarea', `${darkMode ? 'darkmode' : ''}`)}
                            id="message"
                            name="Message"
                            required
@@ -142,7 +146,7 @@ const Contact: React.FC = () => {
                      </div>
                      <div className={cx('contact-group')}>
                         <input
-                           className={cx('send-btn', { loading })}
+                           className={cx('send-btn' ,`${darkMode ? 'darkmode' : ''}`, { loading })}
                            type="submit"
                            value={loading ? 'SENDING...' : 'SEND'}
                            disabled={loading}

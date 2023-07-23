@@ -3,7 +3,6 @@
    height: auto;
    margin: 0 auto;
    padding: 20px;
-
 }
 
 .school-info {
@@ -15,9 +14,15 @@
    padding: 20px;
    border: 4px solid var(--primary);
    border-radius: 15px;
+   &.darkmode {
+      border: 4px solid var(--white);
+   }
 }
 .school-info.tdc {
    border-color: var(--primary-opp);
+   &.darkmode {
+      border: 4px solid var(--white);
+   }
 }
 
 .school-logo {
@@ -35,6 +40,9 @@
       height: 160px;
       object-fit: cover;
    }
+   &.darkmode {
+      background-color: var(--bg-darkmode);
+   }
 }
 
 .school-time {
@@ -47,9 +55,17 @@
       font-size: 2rem;
       font-weight: 600;
    }
+   &.darkmode {
+      color: var(--black);
+      background-color: var(--white);
+   }
 }
 .tdc .school-time {
    background-color: var(--primary-opp);
+   &.darkmode {
+      color: var(--black);
+      background-color: var(--white);
+   }
 }
 .tdc {
    .school {
@@ -68,6 +84,9 @@
    .school-name {
       color: var(--primary);
       font-size: 2.8rem;
+      &.darkmode {
+         color: var(--white);
+      }
    }
    .school-major {
       font-weight: 600;

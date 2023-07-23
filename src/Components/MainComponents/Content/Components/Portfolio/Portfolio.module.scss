@@ -10,4 +10,8 @@
     background-color: var(--primary);
     border-radius: 10px;
     margin-bottom: 16px;
+    &.darkmode {
+    background-color: var(--white);
+
+    }
 }

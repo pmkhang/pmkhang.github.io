@@ -35,6 +35,9 @@
    &:focus::after {
       width: calc(100% - 15px);
    }
+   &.darkmode {
+      color: var(--text-darkmode);
+   }
 }
 
 .menu-toggle {
@@ -54,7 +57,10 @@
    margin-bottom: 4px;
    transition: transform 0.5s ease;
    border-radius: 15px;
-   box-shadow: 0 2px 3px 2px rgba($color: #c6c6c6, $alpha: 0.5);
+   &.darkmode {
+   background-color: var(--white);
+
+   }
 }
 
 .menu-toggle .bar:nth-child(2) {
@@ -115,6 +121,9 @@
    background-color: var(--white);
    -webkit-tap-highlight-color: transparent;
    cursor: pointer;
+   &.darkmode {
+      background-color: var(--bg-darkmode);
+   }
 }
 
 .mobile-navbar-item {
@@ -126,6 +135,12 @@
    &:active {
       background-color: var(--primary);
    }
+   &.darkmode {
+      color: var(--text-darkmode);
+   }
+   &.darkmode:active {
+      background-color: var(--primary);
+   }
 }
 
 .mobile-navbar-link {
@@ -135,6 +150,12 @@
    font-weight: 500;
    text-align: center;
    &:active {
+      color: var(--white);
+   }
+   &.darkmode {
+      color: var(--text-darkmode);
+   }
+   &.darkmode:active {
       color: var(--white);
    }
 }
@@ -184,7 +205,9 @@
       opacity: 0;
    }
 }
-
+.darkmode-toggle {
+   padding: 10px 0;
+}
 @media (min-width: 740px) and (max-width: 1023px) {
    .navbar-link {
       font-size: 1.8rem;

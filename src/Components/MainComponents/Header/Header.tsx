@@ -1,10 +1,9 @@
 import classNames from 'classnames/bind';
 import { Link } from 'react-scroll';
-
 import styles from './Header.module.scss';
 import Navbar from './Components/Navbar';
-
 import logo from '~/Assets/Images/logo2.svg';
+import DarkModeToggle from 'DarkMode/DarkModeToggle';
 
 const cx = classNames.bind(styles);
 
@@ -19,6 +18,7 @@ const Header: React.FC = () => {
             <img className={cx('logo-img')} src={logo} alt="" />
          </Link>
          <Navbar />
+         <DarkModeToggle className={cx('darkmode-toggle')} />
       </div>
    );
 };

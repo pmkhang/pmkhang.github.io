@@ -15,6 +15,9 @@
    height: 100px;
    background-color: var(--primary);
    border-radius: 10px;
+   &.darkmode {
+      background-color: var(--white);
+   }
 }
 
 .box {
@@ -39,6 +42,9 @@
    border: 3px solid var(--primary);
    border-radius: 20px;
    margin-bottom: 20px;
+   &.darkmode {
+      border: 3px solid var(--white);
+   }
 }
 .skill-img {
    position: absolute;
@@ -46,6 +52,9 @@
    height: 90px;
    padding: 0 6px;
    background-color: var(--white);
+   &.darkmode {
+      background-color: var(--bg-darkmode);
+   }
    &:hover {
       padding: unset;
       background-color: unset;
@@ -82,6 +91,9 @@
    padding: 5px;
    border: 3px solid var(--primary);
    border-radius: 30px;
+   &.darkmode {
+      border: 3px solid var(--white);
+   }
 }
 .percent-90,
 .percent-85,
@@ -99,6 +111,12 @@
    span {
       margin-right: 10px;
       font-weight: 600;
+   }
+   &.darkmode {
+      background-color: var(--white);
+      span {
+         color: var(--black);
+      }
    }
 }
 
@@ -121,9 +139,15 @@
 .graphic {
    .skill {
       border-color: var(--primary-opp);
+      &.darkmode {
+         border: 3px solid var(--white);
+      }
    }
    .percent {
       border-color: var(--primary-opp);
+      &.darkmode {
+         border: 3px solid var(--white);
+      }
    }
    .percent-90,
    .percent-85,
@@ -131,6 +155,12 @@
    .percent-75,
    .percent-70 {
       background-color: var(--primary-opp);
+      &.darkmode {
+         background-color: var(--white);
+         span {
+            color: var(--black);
+         }
+      }
    }
 }
 

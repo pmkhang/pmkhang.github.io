@@ -29,6 +29,10 @@
    background-color: var(--primary);
    color: var(--white);
    opacity: 0.9;
+   &.darkmode {
+      color: var(--black);
+      background-color: var(--white);
+   }
 }
 .info-description {
    font-size: 1.6rem;

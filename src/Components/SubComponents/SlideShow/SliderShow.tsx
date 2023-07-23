@@ -5,6 +5,8 @@ import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/splide/dist/css/themes/splide-default.min.css';
 
 import './SliderShow.scss';
+import { useDarkMode } from 'DarkMode/DarkModeContext';
+
 
 interface Image {
    id: number;
@@ -17,6 +19,8 @@ interface SliderGalleryProps {
 }
 
 const SlideShow: React.FC<SliderGalleryProps> = ({ images, className }) => {
+   const { darkMode } = useDarkMode();
+
    const splideOptions = {
       type: 'loop',
       rewind: true,

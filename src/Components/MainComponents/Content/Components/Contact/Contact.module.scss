@@ -24,12 +24,15 @@
 }
 .info {
    padding: 10px 0;
-   font-size: 1.6rem;
-   font-weight: 600;
+   font-size: 2rem;
+   font-weight: 700;
    color: var(--primary);
    cursor: pointer;
    &:hover {
       transform: translateX(10px);
+   }
+   &.darkmode {
+      color: var(--white);
    }
 }
 .icon {
@@ -50,8 +53,16 @@
    border-radius: 5px;
    font-size: 1.6rem;
    font-weight: 600;
-   
    transition: 0.3s all linear;
+
+   &.darkmode {
+      color: var(--text-darkmode);
+      background-color: var(--bg-darkmode);
+      border: 2px solid var(--white);
+      &::placeholder {
+         color: rgb(212, 212, 212);
+      }
+   }
    &.email {
       margin-right: 8px;
    }
@@ -80,9 +91,12 @@
    color: var(--white);
    background-color: var(--primary);
    font-size: 1.6rem;
-   font-weight: 600;
+   font-weight: 700;
    transition: 0.3s all linear;
-
+   &.darkmode {
+      color: var(--black);
+      background-color: var(--white);
+   }
    &:hover {
       border-radius: 30px;
       opacity: 0.85;
