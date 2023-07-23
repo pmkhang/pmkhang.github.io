@@ -141,6 +141,9 @@
    &.darkmode:active {
       background-color: var(--primary);
    }
+   &.toggle:active {
+      background-color: unset;
+   }
 }
 
 .mobile-navbar-link {

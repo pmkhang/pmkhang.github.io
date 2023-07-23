@@ -107,7 +107,7 @@ const Navbar: React.FC = () => {
                      </Link>
                   </li>
                ))}
-               <li className={cx('mobile-navbar-item')}>
+               <li className={cx('mobile-navbar-item', 'toggle')}>
                   <DarkModeToggle className={cx('darkmode-toggle')}/>
                </li>
             </ul>
