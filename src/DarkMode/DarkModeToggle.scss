@@ -21,7 +21,6 @@
    bottom: 0;
    background-color: #d6d5d5;
    transition: 0.4s;
-   
    width: 42px;
    height: 24px;
 }
@@ -48,9 +47,17 @@ input:checked + .slider:before {
 
 /* Rounded sliders */
 .slider.round {
-   border-radius: 12px; /* Điều chỉnh độ cong của slider để nút tròn nhỏ hơn */
+   border-radius: 12px;
 }
 
 .slider.round:before {
    border-radius: 50%;
+}
+
+@media (max-width: 1023px) {
+   
+}
+
+@media (max-width: 739px) {
+   
 }
