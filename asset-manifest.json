@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.0b95d48c.css",
-    "main.js": "/static/js/main.ed1b0d60.js",
+    "main.css": "/static/css/main.6310768a.css",
+    "main.js": "/static/js/main.e110ce79.js",
     "static/js/787.a2aa7606.chunk.js": "/static/js/787.a2aa7606.chunk.js",
     "static/media/brain.svg": "/static/media/brain.420b4d9086841eb269efc2540258b954.svg",
     "static/media/a3.png": "/static/media/a3.203dd0b64c567e4bda0f.png",
@@ -11,6 +11,7 @@
     "static/media/photoshop.svg": "/static/media/photoshop.b43e1dc74fd9949ae81524d7689820de.svg",
     "static/media/logoAptech.svg": "/static/media/logoAptech.198a592759e842a636b7e1ce059a4d15.svg",
     "static/media/logowname.svg": "/static/media/logowname.7c5043963f14016cd797b174564260af.svg",
+    "static/media/logo3.svg": "/static/media/logo3.35211d223a64906c0f225c5f932ff113.svg",
     "static/media/logoTDC.svg": "/static/media/logoTDC.895952abb4e6cea22151d825e3733f40.svg",
     "static/media/react.svg": "/static/media/react.2cc7cf9c50931097b9c0ec0b1195af70.svg",
     "static/media/html.svg": "/static/media/html.2bfe5f17ff87b2aa42ce6f49692bb628.svg",
@@ -21,12 +22,12 @@
     "static/media/illustrator.svg": "/static/media/illustrator.8d2cfdaee91b8eac531cb8dbc9564cc0.svg",
     "static/media/indesign.svg": "/static/media/indesign.4858428f924179c4acbbb780c27d66a8.svg",
     "index.html": "/index.html",
-    "main.0b95d48c.css.map": "/static/css/main.0b95d48c.css.map",
-    "main.ed1b0d60.js.map": "/static/js/main.ed1b0d60.js.map",
+    "main.6310768a.css.map": "/static/css/main.6310768a.css.map",
+    "main.e110ce79.js.map": "/static/js/main.e110ce79.js.map",
     "787.a2aa7606.chunk.js.map": "/static/js/787.a2aa7606.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0b95d48c.css",
-    "static/js/main.ed1b0d60.js"
+    "static/css/main.6310768a.css",
+    "static/js/main.e110ce79.js"
   ]
 }
