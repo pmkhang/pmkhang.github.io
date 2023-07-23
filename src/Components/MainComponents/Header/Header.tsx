@@ -4,6 +4,7 @@ import styles from './Header.module.scss';
 import Navbar from './Components/Navbar';
 import logo from '~/Assets/Images/logo2.svg';
 import DarkModeToggle from 'DarkMode/DarkModeToggle';
+import LanguageToggle from 'SwitchLanguage/LanguageToggle';
 
 const cx = classNames.bind(styles);
 
@@ -18,7 +19,10 @@ const Header: React.FC = () => {
             <img className={cx('logo-img')} src={logo} alt="" />
          </Link>
          <Navbar />
-         <DarkModeToggle className={cx('darkmode-toggle')} />
+         <div className={cx('toggle-btn')}>
+            <LanguageToggle className={cx('language-toggle')} />
+            <DarkModeToggle className={cx('darkmode-toggle')} />
+         </div>
       </div>
    );
 };

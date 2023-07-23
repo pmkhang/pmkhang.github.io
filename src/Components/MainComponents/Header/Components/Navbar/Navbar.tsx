@@ -5,6 +5,7 @@ import { Link } from 'react-scroll';
 import styles from './Navbar.module.scss';
 import { useDarkMode } from 'DarkMode/DarkModeContext';
 import DarkModeToggle from 'DarkMode/DarkModeToggle';
+import LanguageToggle from 'SwitchLanguage/LanguageToggle';
 
 const cx = classNames.bind(styles);
 
@@ -76,15 +77,18 @@ const Navbar: React.FC = () => {
                ))}
             </ul>
          </nav>
-         <label
-            htmlFor="show-hide-navbar"
-            className={cx('menu-toggle', { active: isActive })}
-            onClick={handleMenuToggle}
-         >
-            <div className={cx('bar', `${darkMode ? 'darkmode' : ''}`)}></div>
-            <div className={cx('bar', `${darkMode ? 'darkmode' : ''}`)}></div>
-            <div className={cx('bar', `${darkMode ? 'darkmode' : ''}`)}></div>
-         </label>
+         <div className={cx('toggle-btn')}>
+            <LanguageToggle className={cx('language-toggle')} />
+            <label
+               htmlFor="show-hide-navbar"
+               className={cx('menu-toggle', { active: isActive })}
+               onClick={handleMenuToggle}
+            >
+               <div className={cx('bar', `${darkMode ? 'darkmode' : ''}`)}></div>
+               <div className={cx('bar', `${darkMode ? 'darkmode' : ''}`)}></div>
+               <div className={cx('bar', `${darkMode ? 'darkmode' : ''}`)}></div>
+            </label>
+         </div>
          <input type="checkbox" name="" id="show-hide-navbar" className={cx('menu-toggle', 'hiden')} hidden />
          <label
             htmlFor="show-hide-navbar"

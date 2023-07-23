@@ -61,6 +61,9 @@
       background-color: var(--white);
    }
 }
+.toggle-btn {
+   display: none; 
+}
 
 .menu-toggle .bar:nth-child(2) {
    width: 70%;
@@ -212,7 +215,7 @@
 }
 @media (min-width: 740px) and (max-width: 1023px) {
    .navbar-link {
-      padding: 4px;
+      padding: 2px;
       font-size: 1.8rem;
    }
 }
@@ -226,5 +229,12 @@
    }
    .mobile-navbar {
       display: block;
+   }
+   .toggle-btn {
+      display: flex; 
+      align-items: center;
+      .language-toggle {
+         margin-right: 20px;
+      }
    }
 }

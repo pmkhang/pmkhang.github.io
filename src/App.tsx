@@ -16,13 +16,16 @@ const App: React.FC = () => {
          <header className={cx('header', `${darkMode ? 'darkmode' : ''}`)}>
             <Header />
          </header>
-         <div className={cx('banner')}></div>
-         <main className={cx('content')}>
-            <Content />
-         </main>
-         <footer className={cx('footer')}>
-            <Footer />
-         </footer>
+         {/* <div className={cx('banner')}></div> */}
+         
+            <main className={cx('content')}>
+               <Content />
+            </main>
+         
+            <footer className={cx('footer')}>
+               <Footer />
+            </footer>
+         
       </div>
    );
 };

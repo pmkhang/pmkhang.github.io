@@ -9,11 +9,17 @@
 .logo-img {
    width: 100px;
    margin: 2px 0 0 20px;
-   filter: drop-shadow(0px 3px 3px rgba(0,0,0,0.8));
+   filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.8));
    cursor: pointer;
+}
+.toggle-btn {
+   display: flex;
 }
 .darkmode-toggle {
    margin-right: 20px;
+}
+.language-toggle {
+   margin-right: 6px;
 }
 
 @media (min-width: 740px) and (max-width: 1023px) {
@@ -33,7 +39,7 @@
       margin-top: 6px;
       width: 60px;
    }
-   .darkmode-toggle {
+   .toggle-btn {
       display: none;
    }
 }
