@@ -18,7 +18,7 @@ interface SliderGalleryProps {
 
 const SlideShow: React.FC<SliderGalleryProps> = ({ images, className }) => {
    const splideOptions = {
-      type: 'slide',
+      type: 'loop',
       rewind: true,
       perPage: 1,
       arrows: false,
@@ -26,7 +26,6 @@ const SlideShow: React.FC<SliderGalleryProps> = ({ images, className }) => {
       autoplay: true,
       interval: 3000,
       pauseOnHover: true,
-      perMove: 1,
    };
 
    return (
