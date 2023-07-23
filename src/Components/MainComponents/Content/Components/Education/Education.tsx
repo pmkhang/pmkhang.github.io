@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import classNames from 'classnames/bind';
 
 import styles from './Education.module.scss';
@@ -9,14 +8,9 @@ import SliderComponent from 'Components/SubComponents/SlideShow/SliderShow';
 import slider from 'Assets/Slider';
 import { useDarkMode } from 'DarkMode/DarkModeContext';
 import { useLanguage } from 'SwitchLanguage/Language';
-import LanguageToggle from 'SwitchLanguage/LanguageToggle';
 
 const cx = classNames.bind(styles);
 
-enum SupportedLanguages {
-   EN = 'en',
-   VI = 'vi',
-}
 
 interface EducationData {
    schoolLogo: string;

@@ -1,44 +1,63 @@
 import classNames from 'classnames/bind';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-scroll';
 
 import styles from './Navbar.module.scss';
 import { useDarkMode } from 'DarkMode/DarkModeContext';
 import DarkModeToggle from 'DarkMode/DarkModeToggle';
 import LanguageToggle from 'SwitchLanguage/LanguageToggle';
+import { useLanguage } from 'SwitchLanguage/Language';
 
 const cx = classNames.bind(styles);
 
 interface MenuItem {
    id: string;
-   label: string;
+   label: {
+      en: string;
+      vi: string;
+   };
    to: string;
 }
 
 const menuItems: MenuItem[] = [
    {
       id: 'aboutme',
-      label: 'About Me',
+      label: {
+         en: 'About Me',
+         vi: 'Giới thiệu',
+      },
       to: 'aboutme',
    },
    {
       id: 'education',
-      label: 'Education',
+      label: {
+         en: 'Education',
+         vi: 'Học vấn',
+      },
       to: 'education',
    },
    {
       id: 'experience',
-      label: 'Experience',
+      label: {
+         en: 'Experience',
+         vi: 'Kinh nghiệm',
+      },
       to: 'experience',
    },
    {
       id: 'portfolio',
-      label: 'Portfolio',
+      label: {
+         en: 'Portfolio',
+         vi: 'Sản phẩm',
+      },
       to: 'portfolio',
    },
    {
       id: 'contact',
-      label: 'Contact',
+      label: {
+         en: 'Contact',
+         vi: 'Liên hệ',
+      },
       to: 'contact',
    },
 ];
@@ -46,17 +65,22 @@ const menuItems: MenuItem[] = [
 const Navbar: React.FC = () => {
    const [isActive, setIsActive] = useState(false);
    const { darkMode } = useDarkMode();
+   const { language } = useLanguage();
 
    const handleMenuToggle = () => {
       setIsActive(!isActive);
    };
+
    const handleLinkClick = () => {
       setIsActive(false);
+   };
+
+   useEffect(() => {
       const checkbox = document.getElementById('show-hide-navbar') as HTMLInputElement;
       if (checkbox) {
-         checkbox.checked = false;
+         checkbox.checked = isActive;
       }
-   };
+   }, [isActive]);
 
    return (
       <>
@@ -70,8 +94,9 @@ const Navbar: React.FC = () => {
                         offset={-100}
                         smooth={true}
                         duration={50}
+                        onClick={handleLinkClick}
                      >
-                        {menuItem.label}
+                        {language === 'vi' ? menuItem.label.vi : menuItem.label.en}
                      </Link>
                   </li>
                ))}
@@ -107,7 +132,7 @@ const Navbar: React.FC = () => {
                         smooth={true}
                         duration={50}
                      >
-                        {menuItem.label}
+                        {language === 'vi' ? menuItem.label.vi : menuItem.label.en}
                      </Link>
                   </li>
                ))}

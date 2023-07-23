@@ -6,35 +6,67 @@ import styles from './AboutMe.module.scss';
 import { Col, Grid, Row } from 'GridSystem - typescript';
 import brain from '~/Assets/Images/brain.svg';
 import { useDarkMode } from 'DarkMode/DarkModeContext';
-
+import { useLanguage } from 'SwitchLanguage/Language';
 
 const cx = classNames.bind(styles);
 
 interface AboutMeData {
-   greeting: string;
-   multiText: string[];
-   description: string;
-   imageSrc: string;
-   altText: string;
+   greeting: {
+      en: string;
+      vi: string;
+   };
+   multiText: {
+      en: string[];
+      vi: string[];
+   };
+   description: {
+      en: string;
+      vi: string;
+   };
+   imageSrc: {
+      en: string;
+      vi: string;
+   };
+   altText: {
+      en: string;
+      vi: string;
+   };
 }
 
-const aboutMeData: AboutMeData = {
-   greeting: 'Hello!',
-   multiText: ['PHAM MINH KHANG', 'a Front-End Developer', 'a Graphic, UI-UX Designer'],
-   description:
-      'As a proficient Front-End Developer with expertise in HTML, CSS , JavaScript and React, and a talented Graphic, UI-UX Designer with a deep understanding of visual design principles and have experience using tools such as Adobe Photoshop, Illustrator, InDesign and Figma.',
-   imageSrc: brain, 
-   altText: 'brain', 
-};
+const aboutMeData: AboutMeData[] = [
+   {
+      greeting: {
+         en: 'Hello!',
+         vi: 'Xin chào!',
+      },
+      multiText: {
+         en: ['PHAM MINH KHANG', 'a Front-End Developer', 'a Graphic, UI-UX Designer'],
+         vi: ['PHẠM MINH KHANG', 'Lập trình viên Front-End', 'Graphic, UI-UX Designer'],
+      },
+      description: {
+         en: 'As a proficient Front-End Developer with expertise in HTML, CSS , JavaScript and React, and a talented Graphic, UI-UX Designer with a deep understanding of visual design principles and have experience using tools such as Adobe Photoshop, Illustrator, InDesign and Figma.',
+         vi: 'Là một Lập trình viên Front-End thành thạo với chuyên môn trong HTML, CSS, JavaScript và React, và là một Graphic, UI-UX Designer với sự hiểu biết sâu về nguyên tắc thiết kế hình ảnh và có kinh nghiệm sử dụng các công cụ như Adobe Photoshop, Illustrator, InDesign và Figma.',
+      },
+      imageSrc: {
+         en: brain,
+         vi: brain,
+      },
+      altText: {
+         en: 'brain',
+         vi: 'bộ não',
+      },
+   },
+];
 
 const AboutMe: React.FC = () => {
    const typedElementRef = useRef<HTMLSpanElement>(null);
    const { darkMode } = useDarkMode();
+   const { language } = useLanguage();
 
    useEffect(() => {
       if (typedElementRef.current) {
          const typingEffect = new Typed(typedElementRef.current, {
-            strings: aboutMeData.multiText,
+            strings: aboutMeData[0].multiText[language],
             typeSpeed: 35,
             backSpeed: 35,
             backDelay: 1000,
@@ -45,27 +77,39 @@ const AboutMe: React.FC = () => {
             typingEffect.destroy();
          };
       }
-   }, []);
+   }, [language]);
 
    return (
       <section id="aboutme" className={cx('wrapper')}>
          <Grid>
             <Row>
-               <Col size={['l-6', 'm-12', 's-12']}>
-                  <div className={cx('info')}>
-                     <h2 className={cx('greeting')}>{aboutMeData.greeting}</h2>
-                     <div className={cx('info-text')}>
-                        <h2>I'm</h2>
-                        <h2>
-                           <strong ref={typedElementRef} className={cx('multi-text',`${darkMode ? 'darkmode' : ''}`)}></strong>
+               {aboutMeData.map((aboutMe, index) => (
+                  <Col key={index} size={['l-6', 'm-12', 's-12']}>
+                     <div className={cx('info')}>
+                        <h2 className={cx('greeting')}>
+                           {language === 'vi' ? aboutMe.greeting.vi : aboutMe.greeting.en}
                         </h2>
+                        <div className={cx('info-text')}>
+                           <h2>{language === 'vi' ? 'Tôi là' : "I'm"}</h2>
+                           <h2>
+                              <strong
+                                 ref={typedElementRef}
+                                 className={cx('multi-text', `${darkMode ? 'darkmode' : ''}`)}
+                              ></strong>
+                           </h2>
+                        </div>
+                        <strong className={cx('info-description')}>
+                           {language === 'vi' ? aboutMe.description.vi : aboutMe.description.en}
+                        </strong>
                      </div>
-                     <strong className={cx('info-description')}>{aboutMeData.description}</strong>
-                  </div>
-               </Col>
+                  </Col>
+               ))}
                <Col size={['l-6', 'm-12', 's-12']}>
                   <div className={cx('img-desc')}>
-                     <img src={aboutMeData.imageSrc} alt={aboutMeData.altText} />
+                     <img
+                        src={language === 'vi' ? aboutMeData[0].imageSrc.vi : aboutMeData[0].imageSrc.en} // Fixed the index here, assuming there's only one item in the array
+                        alt={language === 'vi' ? aboutMeData[0].altText.vi : aboutMeData[0].altText.en} // Fixed the index here, assuming there's only one item in the array
+                     />
                   </div>
                </Col>
             </Row>

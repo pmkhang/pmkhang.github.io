@@ -17,15 +17,12 @@ const App: React.FC = () => {
             <Header />
          </header>
          {/* <div className={cx('banner')}></div> */}
-         
-            <main className={cx('content')}>
-               <Content />
-            </main>
-         
-            <footer className={cx('footer')}>
-               <Footer />
-            </footer>
-         
+         <main className={cx('content')}>
+            <Content />
+         </main>
+         <footer className={cx('footer')}>
+            <Footer />
+         </footer>
       </div>
    );
 };

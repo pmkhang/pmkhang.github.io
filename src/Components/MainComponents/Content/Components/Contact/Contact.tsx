@@ -7,6 +7,7 @@ import { faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import styles from './Contact.module.scss';
 import { Col, Grid, Row } from 'GridSystem - typescript';
 import { useDarkMode } from 'DarkMode/DarkModeContext';
+import { useLanguage } from 'SwitchLanguage/Language';
 
 const cx = classNames.bind(styles);
 
@@ -17,6 +18,29 @@ interface ContactFormData extends FormData {
    Title: string;
    Message: string;
 }
+interface ContactInfo {
+   title: {
+      en: string;
+      vi: string;
+   };
+   description: {
+      en: string;
+      vi: string;
+   };
+}
+
+const contactInfoData: ContactInfo[] = [
+   {
+      title: {
+         en: "Let's work together",
+         vi: 'Hợp tác cùng nhau',
+      },
+      description: {
+         en: 'Feel free to get in touch with me. I am always willing to accompany you. Develop, create new ideas, your vision.',
+         vi: 'Hãy liên hệ cho tôi. Tôi luôn sẵn lòng đồng hành cùng với bạn. Phát triển, sáng tạo ý tưởng mới tầm nhìn của bạn.',
+      },
+   },
+];
 
 const Contact: React.FC = () => {
    const scriptURL =
@@ -25,6 +49,7 @@ const Contact: React.FC = () => {
    const [loading, setLoading] = useState<boolean>(false);
    const formRef = useRef<HTMLFormElement>(null);
    const { darkMode } = useDarkMode();
+   const { language } = useLanguage();
 
    const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
       event.preventDefault();
@@ -55,30 +80,35 @@ const Contact: React.FC = () => {
          <Grid>
             <Row>
                <Col size={['l-4', 'm-12', 's-12']}>
-                  <div className={cx('my-info')}>
-                     <h2 className={cx('title')}>Let's work together</h2>
-                     <span className={cx('title-desc')}>
-                        Feel free to get in touch with me. I am always open to discussing new projects, creative ideas
-                        or opportunities to be part of your visions.
-                     </span>
-                     <a className={cx('info', `${darkMode ? 'darkmode' : ''}`)} href="mailto:pham.m.khang.98@gmail.com">
-                        <span className={cx('icon')}>
-                           <FontAwesomeIcon icon={faEnvelope} />
+                  {contactInfoData.map((contactInfo, index) => (
+                     <div key={index} className={cx('my-info')}>
+                        <h2 className={cx('title')}>
+                           {language === 'vi' ? contactInfo.title.vi : contactInfo.title.en}
+                        </h2>
+                        <span className={cx('title-desc')}>
+                           {language === 'vi' ? contactInfo.description.vi : contactInfo.description.en}
                         </span>
-                        Pham.m.khang.98@gmail.com
-                     </a>
-                     <a className={cx('info', `${darkMode ? 'darkmode' : ''}`)} href="tel:+84779066965">
-                        <span className={cx('icon')}>
-                           <FontAwesomeIcon icon={faPhone} />
-                        </span>
-                        +84 779066965
-                     </a>
-                  </div>
+                        <a
+                           className={cx('info', `${darkMode ? 'darkmode' : ''}`)}
+                           href="mailto:pham.m.khang.98@gmail.com"
+                        >
+                           <span className={cx('icon')}>
+                              <FontAwesomeIcon icon={faEnvelope} />
+                           </span>
+                           Pham.m.khang.98@gmail.com
+                        </a>
+                        <a className={cx('info', `${darkMode ? 'darkmode' : ''}`)} href="tel:+84779066965">
+                           <span className={cx('icon')}>
+                              <FontAwesomeIcon icon={faPhone} />
+                           </span>
+                           +84 779066965
+                        </a>
+                     </div>
+                  ))}
                </Col>
                <Col size={['l-8', 'm-12', 's-12']}>
                   <form ref={formRef} id="contact-form" name="data" onSubmit={handleSubmit}>
-                     <h2 className={cx('title')}>Get in touch</h2>
-
+                     <h2 className={cx('title')}>{language === 'vi' ? 'Liên hệ' : 'Get in touch'}</h2>
                      <div className={cx('contact-group')}>
                         <input
                            className={cx('contact-input', `${darkMode ? 'darkmode' : ''}`)}
@@ -86,7 +116,7 @@ const Contact: React.FC = () => {
                            id="name"
                            name="Name"
                            required
-                           placeholder="Your name"
+                           placeholder={`${language === 'vi' ? 'Tên' : 'Name'}`}
                            disabled={loading}
                            spellCheck
                         />
@@ -98,7 +128,7 @@ const Contact: React.FC = () => {
                            id="email"
                            name="Email"
                            required
-                           placeholder="Your email"
+                           placeholder={`${language === 'vi' ? 'Email' : 'Email'}`}
                            pattern="\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}\b"
                            disabled={loading}
                            spellCheck
@@ -109,7 +139,7 @@ const Contact: React.FC = () => {
                            id="phone"
                            name="Phone"
                            required
-                           placeholder="Your phone number"
+                           placeholder={`${language === 'vi' ? 'Số điện thoại' : 'Phone number'}`}
                            pattern="(\+\d{1,3}\s?)?(\(\d{1,3}\)\s?)?[\d\s-]{8,}"
                            disabled={loading}
                            onKeyPress={(event) => {
@@ -128,7 +158,7 @@ const Contact: React.FC = () => {
                            id="title"
                            name="Title"
                            required
-                           placeholder="Your title"
+                           placeholder={`${language === 'vi' ? 'Chủ đề' : 'Title'}`}
                            disabled={loading}
                         />
                      </div>
@@ -138,7 +168,7 @@ const Contact: React.FC = () => {
                            id="message"
                            name="Message"
                            required
-                           placeholder="Your message"
+                           placeholder={`${language === 'vi' ? 'Lời nhắn' : 'Message'}`}
                            disabled={loading}
                         ></textarea>
                      </div>
@@ -146,8 +176,11 @@ const Contact: React.FC = () => {
                         <input
                            className={cx('send-btn', `${darkMode ? 'darkmode' : ''}`, { loading })}
                            type="submit"
-                           value={loading ? 'SENDING...' : 'SEND'}
-                           disabled={loading}
+                           value={
+                              loading
+                                 ? `${language === 'vi' ? 'ĐANG GỬI...' : 'SENDING...'}`
+                                 : `${language === 'vi' ? 'GỬI' : 'SEND'}`
+                           }
                         />
                      </div>
                      <span className={cx('alert-message')}>{alertMessage}</span>
