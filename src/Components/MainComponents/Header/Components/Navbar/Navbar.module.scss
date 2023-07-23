@@ -58,8 +58,7 @@
    transition: transform 0.5s ease;
    border-radius: 15px;
    &.darkmode {
-   background-color: var(--white);
-
+      background-color: var(--white);
    }
 }
 
@@ -139,7 +138,7 @@
       color: var(--text-darkmode);
    }
    &.darkmode:active {
-      background-color: var(--primary);
+      background-color: var(--white);
    }
    &.toggle:active {
       background-color: unset;
@@ -159,7 +158,7 @@
       color: var(--text-darkmode);
    }
    &.darkmode:active {
-      color: var(--white);
+      color: var(--black);
    }
 }
 .menu-toggle.hiden {
