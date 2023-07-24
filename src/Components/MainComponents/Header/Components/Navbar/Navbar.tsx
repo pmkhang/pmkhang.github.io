@@ -3,9 +3,9 @@ import React, { useState } from 'react';
 import { Link } from 'react-scroll';
 
 import styles from './Navbar.module.scss';
-import { useDarkMode } from 'DarkMode/DarkModeContext';
 import DarkModeToggle from 'DarkMode/DarkModeToggle';
 import LanguageToggle from 'SwitchLanguage/LanguageToggle';
+import { useDarkMode } from 'DarkMode/DarkModeContext';
 import { useLanguage } from 'SwitchLanguage/Language';
 
 const cx = classNames.bind(styles);
@@ -24,7 +24,7 @@ const menuItems: MenuItem[] = [
       id: 'aboutme',
       label: {
          en: 'About Me',
-         vi: 'Giới thiệu',
+         vi: 'Về tôi',
       },
       to: 'aboutme',
    },

@@ -36,7 +36,7 @@ const contactInfoData: ContactInfo[] = [
          vi: 'Hợp tác cùng nhau',
       },
       description: {
-         en: 'Feel free to get in touch with me. I am always willing to accompany you. Develop, create new ideas, your vision.',
+         en: 'Feel free to get in touch with me. I am always willing to accompany you in developing and creating new ideas that align with your vision.',
          vi: 'Hãy liên hệ cho tôi. Tôi luôn sẵn lòng đồng hành cùng với bạn. Phát triển, sáng tạo ý tưởng mới tầm nhìn của bạn.',
       },
    },

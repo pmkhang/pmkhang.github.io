@@ -44,7 +44,7 @@ const aboutMeData: AboutMeData[] = [
          vi: ['PHẠM MINH KHANG', 'Lập trình viên Front-End', 'Graphic, UI-UX Designer'],
       },
       description: {
-         en: 'As a proficient Front-End Developer with expertise in HTML, CSS , JavaScript and React, and a talented Graphic, UI-UX Designer with a deep understanding of visual design principles and have experience using tools such as Adobe Photoshop, Illustrator, InDesign and Figma.',
+         en: 'As a proficient Front-End Developer with expertise in HTML, CSS, JavaScript, and React, and a talented Graphic/UI-UX Designer with a deep understanding of visual design principles and experience using tools such as Adobe Photoshop, Illustrator, InDesign, and Figma.',
          vi: 'Là một Lập trình viên Front-End thành thạo với chuyên môn trong HTML, CSS, JavaScript và React, và là một Graphic, UI-UX Designer với sự hiểu biết sâu về nguyên tắc thiết kế hình ảnh và có kinh nghiệm sử dụng các công cụ như Adobe Photoshop, Illustrator, InDesign và Figma.',
       },
       imageSrc: {

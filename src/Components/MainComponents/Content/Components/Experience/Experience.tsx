@@ -4,7 +4,7 @@ import styles from './Experience.module.scss';
 import { Grid, Row, Col } from 'GridSystem - typescript';
 import images from 'Assets/Images';
 import { useDarkMode } from 'DarkMode/DarkModeContext';
-
+import { useLanguage } from 'SwitchLanguage/Language';
 
 const cx = classNames.bind(styles);
 
@@ -12,7 +12,10 @@ interface SkillData {
    imgSrc: string;
    altText: string;
    skillName: string;
-   skillDesc: string;
+   skillDesc: {
+      en: string;
+      vi: string;
+   };
    skillPercent: number;
 }
 
@@ -21,28 +24,40 @@ const skillsData: SkillData[] = [
       imgSrc: images.html,
       altText: 'html',
       skillName: 'HTML',
-      skillDesc: 'Advanced',
+      skillDesc: {
+         en: 'Advanced',
+         vi: 'Nâng cao',
+      },
       skillPercent: 90,
    },
    {
       imgSrc: images.css,
       altText: 'css',
       skillName: 'CSS',
-      skillDesc: 'Advanced',
+      skillDesc: {
+         en: 'Advanced',
+         vi: 'Nâng cao',
+      },
       skillPercent: 85,
    },
    {
       imgSrc: images.js,
       altText: 'js',
       skillName: 'JS.TS',
-      skillDesc: 'Advanced',
+      skillDesc: {
+         en: 'Advanced',
+         vi: 'Nâng cao',
+      },
       skillPercent: 80,
    },
    {
       imgSrc: images.react,
       altText: 'react',
       skillName: 'REACT',
-      skillDesc: 'Basic',
+      skillDesc: {
+         en: 'Basic',
+         vi: 'Cơ bản',
+      },
       skillPercent: 70,
    },
 ];
@@ -52,34 +67,47 @@ const graphicSkillsData: SkillData[] = [
       imgSrc: images.ps,
       altText: 'ps',
       skillName: 'Ps',
-      skillDesc: 'Advanced',
+      skillDesc: {
+         en: 'Advanced',
+         vi: 'Nâng cao',
+      },
       skillPercent: 80,
    },
    {
       imgSrc: images.ai,
       altText: 'ai',
       skillName: 'Ai',
-      skillDesc: 'Advanced',
+      skillDesc: {
+         en: 'Advanced',
+         vi: 'Nâng cao',
+      },
       skillPercent: 90,
    },
    {
       imgSrc: images.id,
       altText: 'id',
       skillName: 'Id',
-      skillDesc: 'Advanced',
+      skillDesc: {
+         en: 'Advanced',
+         vi: 'Nâng cao',
+      },
       skillPercent: 85,
    },
    {
       imgSrc: images.figma,
       altText: 'figma',
       skillName: 'Figma',
-      skillDesc: 'Advanced',
+      skillDesc: {
+         en: 'Advanced',
+         vi: 'Nâng cao',
+      },
       skillPercent: 85,
    },
 ];
 
 const Experience: React.FC = () => {
    const { darkMode } = useDarkMode();
+   const { language } = useLanguage();
 
    return (
       <section id="experience" className={cx('wrapper')}>
@@ -92,7 +120,7 @@ const Experience: React.FC = () => {
                            <img className={cx('img')} src={skill.imgSrc} alt={skill.altText} />
                         </div>
                         <h3 className={cx('skill-name')}>{skill.skillName}</h3>
-                        <span className={cx('skill-desc')}>{skill.skillDesc}</span>
+                        <span className={cx('skill-desc')}>{language === 'vi' ? skill.skillDesc.vi : skill.skillDesc.en}</span>
                      </div>
                      <div className={cx('skill-percent')}>
                         <div className={cx('percent', `${darkMode ? 'darkmode' : ''}`)}>
@@ -112,7 +140,7 @@ const Experience: React.FC = () => {
                            <img className={cx('img')} src={skill.imgSrc} alt={skill.altText} />
                         </div>
                         <h3 className={cx('skill-name')}>{skill.skillName}</h3>
-                        <span className={cx('skill-desc')}>{skill.skillDesc}</span>
+                        <span className={cx('skill-desc')}>{language === 'vi' ? skill.skillDesc.vi : skill.skillDesc.en}</span>
                      </div>
                      <div className={cx('skill-percent')}>
                         <div className={cx('percent', `${darkMode ? 'darkmode' : ''}`)}>
