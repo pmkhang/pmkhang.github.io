@@ -27,11 +27,12 @@
       transform: translateX(-50%);
       border-radius: 30px;
    }
-
+   &.darkmode::after {
+      background-color: var(--white);
+   }
    &:hover::after {
       width: calc(100% - 15px);
    }
-
    &:focus::after {
       width: calc(100% - 15px);
    }

@@ -53,7 +53,7 @@ const aboutMeData: AboutMeData[] = [
       },
       altText: {
          en: 'brain',
-         vi: 'bộ não',
+         vi: 'não',
       },
    },
 ];

@@ -1,6 +1,17 @@
 .wrapper {
    width: 100%;
    overflow: hidden;
+   ::selection {
+      background-color: var(--primary);
+      color: var(--white);
+   }
+}
+
+.wrapper.darkmode {
+   ::selection {
+      background-color: var(--white);
+      color: var(--text-color);
+   }
 }
 
 .header {
