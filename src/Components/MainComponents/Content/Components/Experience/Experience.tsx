@@ -68,8 +68,8 @@ const graphicSkillsData: SkillData[] = [
       altText: 'ps',
       skillName: 'Ps',
       skillDesc: {
-         en: 'Advanced',
-         vi: 'Nâng cao',
+         en: 'Expert',
+         vi: 'Thông thạo',
       },
       skillPercent: 80,
    },
@@ -78,8 +78,8 @@ const graphicSkillsData: SkillData[] = [
       altText: 'ai',
       skillName: 'Ai',
       skillDesc: {
-         en: 'Advanced',
-         vi: 'Nâng cao',
+         en: 'Expert',
+         vi: 'Thông thạo',
       },
       skillPercent: 90,
    },
@@ -88,8 +88,8 @@ const graphicSkillsData: SkillData[] = [
       altText: 'id',
       skillName: 'Id',
       skillDesc: {
-         en: 'Advanced',
-         vi: 'Nâng cao',
+         en: 'Expert',
+         vi: 'Thông thạo',
       },
       skillPercent: 85,
    },
@@ -98,8 +98,8 @@ const graphicSkillsData: SkillData[] = [
       altText: 'figma',
       skillName: 'Figma',
       skillDesc: {
-         en: 'Advanced',
-         vi: 'Nâng cao',
+         en: 'Expert',
+         vi: 'Thông thạo',
       },
       skillPercent: 85,
    },

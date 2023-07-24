@@ -57,7 +57,7 @@
 
    &.darkmode {
       color: var(--text-darkmode);
-      background-color: var(--bg-darkmode);
+      background-color: #333333;
       border: 2px solid var(--white);
       &::placeholder {
          color: rgb(212, 212, 212);
