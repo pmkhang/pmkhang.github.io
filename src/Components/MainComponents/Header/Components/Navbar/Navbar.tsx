@@ -63,7 +63,7 @@ const menuItems: MenuItem[] = [
 ];
 
 const Navbar: React.FC = () => {
-   const [isActive, setIsActive] = useState(false);
+   const [isActive, setIsActive] = useState<boolean>(false);
    const { darkMode } = useDarkMode();
    const { language } = useLanguage();
 
