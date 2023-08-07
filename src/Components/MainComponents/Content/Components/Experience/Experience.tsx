@@ -5,6 +5,8 @@ import { Grid, Row, Col } from 'GridSystem - typescript';
 import images from 'Assets/Images';
 import { useDarkMode } from 'DarkMode/DarkModeContext';
 import { useLanguage } from 'SwitchLanguage/Language';
+import { useSelector } from 'react-redux';
+import { RootState } from 'redux/store/store';
 
 const cx = classNames.bind(styles);
 
@@ -106,8 +108,10 @@ const graphicSkillsData: SkillData[] = [
 ];
 
 const Experience: React.FC = () => {
-   const { darkMode } = useDarkMode();
-   const { language } = useLanguage();
+   const darkMode = useSelector((state: RootState) => state.darkMode.darkMode);
+
+   const language = useSelector((state: RootState) => state.language.language); // Lấy trạng thái language từ store
+
 
    return (
       <section id="experience" className={cx('wrapper')}>

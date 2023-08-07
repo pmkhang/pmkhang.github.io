@@ -8,6 +8,8 @@ import SliderComponent from 'Components/SubComponents/SlideShow/SliderShow';
 import slider from 'Assets/Slider';
 import { useDarkMode } from 'DarkMode/DarkModeContext';
 import { useLanguage } from 'SwitchLanguage/Language';
+import { useSelector } from 'react-redux';
+import { RootState } from 'redux/store/store';
 
 const cx = classNames.bind(styles);
 
@@ -76,8 +78,10 @@ const educationData: EducationData[] = [
 ];
 
 const Education: React.FC = () => {
-   const { darkMode } = useDarkMode();
-   const { language } = useLanguage();
+   const darkMode = useSelector((state: RootState) => state.darkMode.darkMode);
+
+   const language = useSelector((state: RootState) => state.language.language); // Lấy trạng thái language từ store
+
 
    return (
       <section id="education" className={cx('wrapper')}>

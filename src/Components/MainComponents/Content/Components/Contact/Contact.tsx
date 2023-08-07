@@ -8,6 +8,8 @@ import styles from './Contact.module.scss';
 import { Col, Grid, Row } from 'GridSystem - typescript';
 import { useDarkMode } from 'DarkMode/DarkModeContext';
 import { useLanguage } from 'SwitchLanguage/Language';
+import { useSelector } from 'react-redux';
+import { RootState } from 'redux/store/store';
 
 const cx = classNames.bind(styles);
 
@@ -48,8 +50,10 @@ const Contact: React.FC = () => {
    const [alertMessage, setAlertMessage] = useState<string>('');
    const [loading, setLoading] = useState<boolean>(false);
    const formRef = useRef<HTMLFormElement>(null);
-   const { darkMode } = useDarkMode();
-   const { language } = useLanguage();
+   const darkMode = useSelector((state: RootState) => state.darkMode.darkMode);
+
+   const language = useSelector((state: RootState) => state.language.language); // Lấy trạng thái language từ store
+
 
    const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
       event.preventDefault();

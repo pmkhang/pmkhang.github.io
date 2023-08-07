@@ -6,12 +6,16 @@ import { Grid, Row, Col } from 'GridSystem - typescript';
 import images from 'Assets/Images';
 import { useDarkMode } from 'DarkMode/DarkModeContext';
 import { useLanguage } from 'SwitchLanguage/Language';
+import { RootState } from 'redux/store/store';
+import { useSelector } from 'react-redux';
 
 const cx = classNames.bind(styles);
 
 const Footer: React.FC = () => {
-   const { darkMode } = useDarkMode();
-   const { language } = useLanguage();
+   const darkMode = useSelector((state: RootState) => state.darkMode.darkMode);
+
+   const language = useSelector((state: RootState) => state.language.language); // Lấy trạng thái language từ store
+
 
    return (
       <div className={cx('container')}>

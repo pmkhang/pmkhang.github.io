@@ -3,11 +3,14 @@ import classNames from 'classnames/bind';
 import styles from './Portfolio.module.scss';
 import { Grid, Row, Col } from 'GridSystem - typescript';
 import { useDarkMode } from 'DarkMode/DarkModeContext';
+import { useSelector } from 'react-redux';
+import { RootState } from 'redux/store/store';
 
 const cx = classNames.bind(styles);
 
 const Portfolio: React.FC = () => {
-   const { darkMode } = useDarkMode();
+   const darkMode = useSelector((state: RootState) => state.darkMode.darkMode);
+
 
    return (
       <section id="portfolio" className={cx('wrapper')}>

@@ -6,6 +6,8 @@ import '@splidejs/splide/dist/css/themes/splide-default.min.css';
 
 import './SliderShow.scss';
 import { useDarkMode } from 'DarkMode/DarkModeContext';
+import { useSelector } from 'react-redux';
+import { RootState } from 'redux/store/store';
 
 
 interface Image {
@@ -19,7 +21,8 @@ interface SliderGalleryProps {
 }
 
 const SlideShow: React.FC<SliderGalleryProps> = ({ images, className }) => {
-   const { darkMode } = useDarkMode();
+   const darkMode = useSelector((state: RootState) => state.darkMode.darkMode);
+
 
    const splideOptions = {
       type: 'loop',

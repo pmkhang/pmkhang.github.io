@@ -7,6 +7,8 @@ import DarkModeToggle from 'DarkMode/DarkModeToggle';
 import LanguageToggle from 'SwitchLanguage/LanguageToggle';
 import { useDarkMode } from 'DarkMode/DarkModeContext';
 import { useLanguage } from 'SwitchLanguage/Language';
+import { useSelector } from 'react-redux';
+import { RootState } from 'redux/store/store';
 
 const cx = classNames.bind(styles);
 
@@ -64,8 +66,10 @@ const menuItems: MenuItem[] = [
 
 const Navbar: React.FC = () => {
    const [isActive, setIsActive] = useState<boolean>(false);
-   const { darkMode } = useDarkMode();
-   const { language } = useLanguage();
+   // const { darkMode } = useDarkMode();
+   // const { language } = useLanguage();
+   const language = useSelector((state: RootState) => state.language.language);
+   const darkMode = useSelector((state: RootState) => state.darkMode.darkMode);
 
    const handleMenuToggle = () => {
       setIsActive(!isActive);

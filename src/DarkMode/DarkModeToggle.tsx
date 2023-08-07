@@ -1,5 +1,7 @@
 import React from 'react';
-import { useDarkMode } from './DarkModeContext';
+import { useSelector, useDispatch } from 'react-redux';
+import { RootState } from 'redux/store/store';
+import { toggleDarkMode } from 'redux/slice/darkModeSlice';
 import './DarkModeToggle.scss';
 
 interface DarkModeToggleProps {
@@ -7,12 +9,14 @@ interface DarkModeToggleProps {
 }
 
 const DarkModeToggle: React.FC<DarkModeToggleProps> = ({ className }) => {
-   const { darkMode, toggleDarkMode } = useDarkMode();
+   const darkMode = useSelector((state: RootState) => state.darkMode.darkMode);
+   const dispatch = useDispatch();
+
    const darkModeToggleClassName = className;
 
    return (
       <div className={darkModeToggleClassName}>
-         <div className="switch" onClick={toggleDarkMode}>
+         <div className="switch" onClick={() => dispatch(toggleDarkMode())}>
             <input type="checkbox" checked={darkMode} readOnly />
             <span className="slider round"></span>
          </div>

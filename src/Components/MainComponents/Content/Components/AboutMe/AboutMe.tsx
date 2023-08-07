@@ -7,6 +7,8 @@ import { Col, Grid, Row } from 'GridSystem - typescript';
 import brain from '~/Assets/Images/brain.svg';
 import { useDarkMode } from 'DarkMode/DarkModeContext';
 import { useLanguage } from 'SwitchLanguage/Language';
+import { useSelector } from 'react-redux';
+import { RootState } from 'redux/store/store';
 
 const cx = classNames.bind(styles);
 
@@ -60,8 +62,10 @@ const aboutMeData: AboutMeData[] = [
 
 const AboutMe: React.FC = () => {
    const typedElementRef = useRef<HTMLSpanElement>(null);
-   const { darkMode } = useDarkMode();
-   const { language } = useLanguage();
+   const darkMode = useSelector((state: RootState) => state.darkMode.darkMode);
+
+   const language = useSelector((state: RootState) => state.language.language); // Lấy trạng thái language từ store
+
 
    useEffect(() => {
       if (typedElementRef.current) {
