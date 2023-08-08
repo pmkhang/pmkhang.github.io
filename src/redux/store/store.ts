@@ -13,9 +13,11 @@ const saveToLocalStorage: Middleware = (store) => (next) => (action) => {
 
 const persistedDarkMode = localStorage.getItem('darkMode');
 const persistedSwLanguage = localStorage.getItem('switchLanguage'); // Lấy trạng thái ngôn ngữ từ localStorage
+
+// Chuyển sang sử dụng object cho preloadedState
 const preloadedState = {
-   darkMode: persistedDarkMode ? JSON.parse(persistedDarkMode) : false,
-   language: persistedSwLanguage ? JSON.parse(persistedSwLanguage) : { language: 'vi' }, // Trạng thái ngôn ngữ mặc định là 'vi'
+   darkMode: { darkMode: persistedDarkMode ? JSON.parse(persistedDarkMode) : false },
+   language: persistedSwLanguage ? JSON.parse(persistedSwLanguage) : { language: 'vi' },
 };
 
 export const store = configureStore({

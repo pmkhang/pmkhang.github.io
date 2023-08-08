@@ -7,7 +7,7 @@ interface DarkModeState {
 }
 
 const initialState: DarkModeState = {
-   darkMode: false, // Giá trị mặc định là false (chế độ sáng)
+   darkMode: false, 
 };
 
 const darkModeSlice = createSlice({
