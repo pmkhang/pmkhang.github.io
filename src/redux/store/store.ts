@@ -1,32 +1,47 @@
 // store.ts
 
-import { configureStore, Middleware } from '@reduxjs/toolkit';
+import { configureStore } from '@reduxjs/toolkit';
 import darkModeReducer from '../slice/darkModeSlice';
 import languageReducer from '../slice/switchLanguage';
 
-const saveToLocalStorage: Middleware = (store) => (next) => (action) => {
-   const result = next(action);
-   localStorage.setItem('darkMode', JSON.stringify(store.getState().darkMode));
-   localStorage.setItem('switchLanguage', JSON.stringify(store.getState().language)); // Lưu trạng thái ngôn ngữ
-   return result;
+// Load initial state from localStorage (if available)
+const loadState = () => {
+   try {
+      const serializedState = localStorage.getItem('state');
+      if (serializedState === null) {
+         return undefined;
+      }
+      return JSON.parse(serializedState);
+   } catch (err) {
+      return undefined;
+   }
 };
 
-const persistedDarkMode = localStorage.getItem('darkMode');
-const persistedSwLanguage = localStorage.getItem('switchLanguage'); // Lấy trạng thái ngôn ngữ từ localStorage
-
-// Chuyển sang sử dụng object cho preloadedState
-const preloadedState = {
-   darkMode: { darkMode: persistedDarkMode ? JSON.parse(persistedDarkMode) : false },
-   language: persistedSwLanguage ? JSON.parse(persistedSwLanguage) : { language: 'vi' },
+// Save state to localStorage
+const saveState = (state: object) => {
+   try {
+      const serializedState = JSON.stringify(state);
+      localStorage.setItem('state', serializedState);
+   } catch {
+      // Handle errors if needed
+   }
 };
 
+// Load initial state
+const initialState = loadState();
+
+// Configure Redux store
 export const store = configureStore({
    reducer: {
       darkMode: darkModeReducer,
       language: languageReducer,
    },
-   middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(saveToLocalStorage),
-   preloadedState,
+   preloadedState: initialState, // Set the preloaded state
+});
+
+// Subscribe to store updates and save state to localStorage
+store.subscribe(() => {
+   saveState(store.getState());
 });
 
 export type RootState = ReturnType<typeof store.getState>;
