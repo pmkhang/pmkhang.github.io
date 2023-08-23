@@ -63,7 +63,6 @@ const aboutMeData: AboutMeData[] = [
 const AboutMe: React.FC = () => {
    const typedElementRef = useRef<HTMLSpanElement>(null);
    const darkMode = useSelector((state: RootState) => state.darkMode.darkMode);
-
    const language = useSelector((state: RootState) => state.language.language); // Lấy trạng thái language từ store
 
 

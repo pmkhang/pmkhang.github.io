@@ -114,7 +114,7 @@ const Education: React.FC = () => {
                ))}
             </Row>
          </Grid>
-         <SliderComponent className={cx('slider')} images={slider} />
+         {/* <SliderComponent className={cx('slider')} images={slider} /> */}
       </section>
    );
 };
